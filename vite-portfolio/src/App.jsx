@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from './sections/navbar/Navbar'
 
 const App = () => {
   return (
@@ -6,6 +7,7 @@ const App = () => {
       <h1 className="text-2xl text-white underline">
         
       </h1>
+      <Navbar />
     </main>
   )
 }
