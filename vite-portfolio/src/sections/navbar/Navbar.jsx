@@ -24,7 +24,7 @@ const Navbar = () => {
                                                             "text-white": isDropdownOpen,
                                                         }
                     )}>
-                        Jean-Philipp Bruehwiler
+                        J.P.
                     </a>
                 <Dropdown isOpen={isDropdownOpen} setIsOpen={setIsDropdownOpen} />
                 </div>
