@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 // import { useFrame } from '@react-three/fiber'
 
-export default function HackerRoom({ scale = [1, 1, 1], position = [0, 0, 0], rotation = [0, 0, 0], debug = true }) {
+export default function HackerRoom({ scale, position, rotation, debug = true }) {
     const group = useRef()
     const { scene } = useGLTF('/models/desktop/scene.gltf')
 
