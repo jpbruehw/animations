@@ -34,17 +34,17 @@
     transition: all 0.25s;
     position: absolute;
     width: 30px;
-    height: 1px;
+    height: 5px;
     right: 15px;
     top: 30px;
-    background-color: white;
+    background-color: #333446;
     
     &:before, &:after{
     transition: all 0.25s;
     width: 30px;
-    height: 1px;
+    height: 5px;
     right: 0;
-    background: white;
+    background: #333446;
     position: absolute;
     content: '';
     }
@@ -115,7 +115,7 @@
     transition: all 0.2s;
     margin-top: 20px;
     padding: 5px 0;
-    color:white;
+    /* color:white; */
   }
   & a{
     padding: 8px;
@@ -129,7 +129,8 @@
   &.open{
     height: 270px;
     width: 100%;
-    background: rgb(23 37 84);
+    /* background: rgb(23 37 84); */
+    background: #EAEFEF;
     border-bottom: 1px solid black;
   }
 }

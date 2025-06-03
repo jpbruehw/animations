@@ -17,7 +17,7 @@ const Dropdown = ({ isOpen, setIsOpen }) => {
                 </div>
                 <div
                     id="menu"
-                    className={classNames({ open: isOpen })}
+                    className={classNames("shadow-xl", { open: isOpen })}
                 >
                 <ul>
                     {navLinks.map((item) => (

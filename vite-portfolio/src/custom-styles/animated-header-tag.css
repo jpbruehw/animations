@@ -1,0 +1,58 @@
+.hero-heading-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  pointer-events: none; /* Prevent hover from parent div */
+}
+
+.hero-heading {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #eaefef;
+  position: relative;
+  display: inline-block;
+  transform: skew(-10deg);
+  letter-spacing: 0.1em;
+  transition: all 0.2s ease;
+  pointer-events: auto; /* Re-enable hover on the heading itself */
+
+}
+
+.hero-heading::before {
+  content: attr(data-heading);
+  position: absolute;
+  transition: all 0.2s ease;
+  backface-visibility: hidden;
+  white-space: nowrap;
+}
+
+.hero-heading::before {
+  color: #7F8CAA;
+  z-index: -1;
+  left: 5px;
+  top: 5px;
+}
+
+/* .hero-heading::after {
+  -webkit-text-stroke: 2px #b8cfce;
+  color: transparent;
+  left: -8px;
+  top: -8px;
+  z-index: 1;
+} */
+
+.hero-heading:hover::before {
+  left: 0px;
+  top: 0px;
+}
+
+.hero-heading:hover {
+color: white;
+}
+
+
+/* .hero-heading:hover::after {
+  left: 0px;
+  top: 0px;
+} */
