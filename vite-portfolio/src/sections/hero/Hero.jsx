@@ -4,60 +4,19 @@ import HackerRoom from "../../components/HackerRoom.jsx"
 import { OrbitControls} from '@react-three/drei'
 import { Suspense } from "react"
 import CanvasLoader from "../../components/CanvasLoader.jsx"
-import { Leva, useControls } from "leva"
+//import { Leva, useControls } from "leva"
 import { useMediaQuery } from "react-responsive"
 import "../../custom-styles/animated-header-tag.css"
+import { useState, useEffect } from "react"
 
 function Hero() {
-    // const c = useControls(
-    //     'HackerRoom',
-    //     {
-    //         positionX: {
-    //             value: 2.5,
-    //             min: -10,
-    //             max: 10
-    //         },
-    //         positionY: {
-    //             value: 2.5,
-    //             min: -10,
-    //             max: 10
-    //         },
-    //         positionZ: {
-    //             value: 2.5,
-    //             min: -10,
-    //             max: 10
-    //         },
-    //         rotationX: {
-    //             value: 2.5,
-    //             min: -10,
-    //             max: 10
-    //         },
-    //         rotationY: {
-    //             value: 2.5,
-    //             min: -10,
-    //             max: 10
-    //         },
-    //         rotationZ: {
-    //             value: 2.5,
-    //             min: -10,
-    //             max: 10
-    //         },
-    //         scale: {
-    //             value: 2.5,
-    //             min: -10,
-    //             max: 10
-    //         },
-            
-    //     }
-    // )
-
-    // go back later and adjust these parts later on
-    // need to have reliable sizing
 
     const isMobile = useMediaQuery({ maxWidth: 768 })
     const isLaptop = useMediaQuery({ minWidth: 769, maxWidth: 1280 })
     const isMonitor = useMediaQuery({ minWidth: 1281, maxWidth: 1600 })
     const isXLMonitor = useMediaQuery({ minWidth: 1601 })
+
+    const [active, setActive] = useState(true)
 
     let scale = 0.4
     let position = [1.2, 0, 2.5]
@@ -77,6 +36,28 @@ function Hero() {
         position = [1.5, -0.3, 2.3]
     }
 
+    useEffect(() => {
+        const firstTimeout = setTimeout(() => {
+            setActive(false); // 1.5s
+            const secondTimeout = setTimeout(() => {
+                setActive(true); 
+                const thirdTimeout = setTimeout(() => {
+                    setActive(false);
+                    const fourthTimeout = setTimeout(() => {
+                        setActive(true)
+                        const fifthTimeout = setTimeout(() => {
+                            setActive(false)
+                        }, 350)
+                        return () => clearTimeout(fifthTimeout)
+                    }, 350)
+                    return () => clearTimeout(fourthTimeout)
+                }, 350);
+                return () => clearTimeout(thirdTimeout);
+            }, 350);
+            return () => clearTimeout(secondTimeout);
+        }, 1000);
+        return () => clearTimeout(firstTimeout);
+    }, []);
 
     return (
         <section className="min-h-screen w-full flex flex-col relative transform-gpu"> 
@@ -84,7 +65,7 @@ function Hero() {
                 <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">Hi, I am Jean-Philipp <span className="waving-hand">👋</span></p>
                 {/* <p className="hero_tag text-gray_gradient">I Deliver Value w/ Data & Technology</p> */}
                 <div className="hero-heading-wrapper z-20">
-                    <h1 className="hero-heading" data-heading="I Create Value w/ Data & Technology">I Create Value w/ Data & Technology</h1>
+                    <h1 className={`hero-heading ${active ? "active": ""} ${isMobile && "ml-2"}`} data-heading="I Create Value w/ Data & Technology">I Create Value w/ Data & Technology</h1>
                 </div>
             </div>
             {/* <Leva /> */}
@@ -96,14 +77,11 @@ function Hero() {
                         <directionalLight position={[10, 10, 10]} intensity={0.5} />
                         <OrbitControls
                             enableZoom={true}
-                            minDistance={10}  // Minimum distance from the target
-                            maxDistance={50}  // Optional: prevent zooming too far out
+                            minDistance={10}
+                            maxDistance={50}
                         />
                         
                         <HackerRoom
-                            // scale={[c.scale, c.scale, c.scale]}
-                            // position={[c.positionX, c.positionY, c.positionZ]}
-                            // rotation={[c.rotationX, c.rotationY, c.rotationZ]}
                             scale={scale}
                             position={position}
                             rotation={rotation}

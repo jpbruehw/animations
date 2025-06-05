@@ -2,12 +2,11 @@
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
   pointer-events: none; /* Prevent hover from parent div */
 }
 
 .hero-heading {
-  font-size: 4rem;
   font-weight: 600;
   color: #eaefef;
   position: relative;
@@ -19,20 +18,49 @@
 
 }
 
+.hero-heading {
+  font-size: 4rem;
+}
+
+@media (max-width: 1024px) {
+  .hero-heading {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2.3rem;
+  }
+}
+
+
 .hero-heading::before {
   content: attr(data-heading);
   position: absolute;
   transition: all 0.2s ease;
   backface-visibility: hidden;
-  white-space: nowrap;
-}
-
-.hero-heading::before {
   color: #7F8CAA;
   z-index: -1;
   left: 5px;
   top: 5px;
+  white-space: nowrap;
 }
+
+@media (max-width: 1280px) {
+  .hero-heading::before {
+    white-space: normal;
+    width: 100%;
+    word-break: break-word;
+  }
+}
+
+/* .hero-heading::before {
+  color: #7F8CAA;
+  z-index: -1;
+  left: 5px;
+  top: 5px;
+} */
 
 /* .hero-heading::after {
   -webkit-text-stroke: 2px #b8cfce;
@@ -42,17 +70,19 @@
   z-index: 1;
 } */
 
-.hero-heading:hover::before {
+.hero-heading:hover::before,
+.hero-heading.active::before {
   left: 0px;
   top: 0px;
 }
 
-.hero-heading:hover {
-color: white;
+.hero-heading:hover,
+.hero-heading.active {
+  color: white;
 }
 
-
-/* .hero-heading:hover::after {
-  left: 0px;
-  top: 0px;
-} */
+@media (max-width: 1280px) {
+  .hero-heading {
+    pointer-events: none;
+  }
+}

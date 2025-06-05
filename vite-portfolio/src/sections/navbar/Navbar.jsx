@@ -1,6 +1,9 @@
 import { useState } from "react"
 import Dropdown from "./Dropdown"
 import classNames from "classnames";
+import DecryptedText from "../../blocks/TextAnimations/DecryptedText/DecryptedText";
+import "../../custom-styles/animated-header-tag.css"
+import NavbarHeader from "./NavbarHeader"
 
 const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
@@ -17,9 +20,7 @@ const Navbar = () => {
         >
             <div className="max-w-7xl mx-auto">
                 <div className="flex justify-center items-center p-5 mx-auto c-space">
-                    <a href="/" className="font-bold text-2xl z-[250] text-center hover:text-[#B8CFCE] hover:cursor-pointer transition-colors">
-                        J.P.
-                    </a>
+                    <NavbarHeader />
                 <Dropdown isOpen={isDropdownOpen} setIsOpen={setIsDropdownOpen} />
                 </div>
             </div>
