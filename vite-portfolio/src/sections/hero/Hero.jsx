@@ -62,7 +62,7 @@ function Hero() {
     return (
         <section className="min-h-screen w-full flex flex-col relative transform-gpu"> 
             <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-                <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">Hi, I am Jean-Philipp <span className="waving-hand">👋</span></p>
+                {/* <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">Hi, I am Jean-Philipp <span className="waving-hand">👋</span></p> */}
                 {/* <p className="hero_tag text-gray_gradient">I Deliver Value w/ Data & Technology</p> */}
                 <div className="hero-heading-wrapper z-20">
                     <h1 className={`hero-heading ${active ? "active": ""} ${isMobile && "ml-2"}`} data-heading="I Create Value w/ Data & Technology">I Create Value w/ Data & Technology</h1>

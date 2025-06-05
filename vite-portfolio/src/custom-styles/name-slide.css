@@ -1,0 +1,28 @@
+.slide-in-text {
+  /* font-size: 2rem; */
+  text-align: center;
+  opacity: 0;
+  /* font-weight: 600; */
+  /* transform: translateX(-200%); */
+  /* transform: translateX(-100vw); */
+  animation: slide-in-anim 1.5s ease-out forwards;
+}
+
+@keyframes slide-in-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+  60% {
+    opacity: 0.6;
+    transform: translateX(30px); /* overshoot */
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateX(-10px); /* back past center slightly */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* centered */
+  }
+}
