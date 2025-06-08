@@ -8,6 +8,7 @@ import CanvasLoader from "../../components/CanvasLoader.jsx"
 import { useMediaQuery } from "react-responsive"
 import "../../custom-styles/animated-header-tag.css"
 import { useState, useEffect } from "react"
+import HeroCamera from "./HeroCamera.jsx"
 
 function Hero() {
 
@@ -38,55 +39,49 @@ function Hero() {
 
     useEffect(() => {
         const firstTimeout = setTimeout(() => {
-            setActive(false); // 1.5s
+            setActive(false); // 
             const secondTimeout = setTimeout(() => {
                 setActive(true); 
                 const thirdTimeout = setTimeout(() => {
                     setActive(false);
-                    const fourthTimeout = setTimeout(() => {
-                        setActive(true)
-                        const fifthTimeout = setTimeout(() => {
-                            setActive(false)
-                        }, 350)
-                        return () => clearTimeout(fifthTimeout)
-                    }, 350)
-                    return () => clearTimeout(fourthTimeout)
                 }, 350);
                 return () => clearTimeout(thirdTimeout);
             }, 350);
             return () => clearTimeout(secondTimeout);
-        }, 1000);
+        }, 4500);
         return () => clearTimeout(firstTimeout);
     }, []);
 
     return (
         <section className="min-h-screen w-full flex flex-col relative transform-gpu"> 
             <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-                {/* <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">Hi, I am Jean-Philipp <span className="waving-hand">👋</span></p> */}
-                {/* <p className="hero_tag text-gray_gradient">I Deliver Value w/ Data & Technology</p> */}
                 <div className="hero-heading-wrapper z-20">
                     <h1 className={`hero-heading ${active ? "active": ""} ${isMobile && "ml-2"}`} data-heading="I Create Value w/ Data & Technology">I Create Value w/ Data & Technology</h1>
                 </div>
             </div>
             {/* <Leva /> */}
             <div className="w-full h-full absolute inset-0">
-                <Canvas className="w-full h-full">
+                <Canvas className="w-full h-full" shadows>
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault />
-                        <ambientLight intensity={1} />
-                        <directionalLight position={[10, 10, 10]} intensity={0.5} />
-                        <OrbitControls
+                        <ambientLight intensity={1.5} />
+                        <directionalLight castShadow position={[20, 80, 12]} intensity={2} />
+                        {/* <OrbitControls
                             enableZoom={true}
                             minDistance={10}
                             maxDistance={50}
-                        />
+                        /> */}
+
+                        <HeroCamera>
                         
-                        <HackerRoom
-                            scale={scale}
-                            position={position}
-                            rotation={rotation}
-                            debug={true}
-                        />
+                            <HackerRoom
+                                scale={scale}
+                                // position={position}
+                                // rotation={rotation}
+                                debug={true}
+                            />
+                        
+                        </HeroCamera>
 
                     </Suspense>
                 </Canvas>

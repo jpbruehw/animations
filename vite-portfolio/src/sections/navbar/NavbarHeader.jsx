@@ -13,7 +13,7 @@ function HeroNameWithEmoji() {
         const fadeOutTimeout = setTimeout(() => {
             setFadeOutIntro(true)
           setTimeout(() => setShowSoloName(true), 1000) // wait for fade out
-        }, 10000)
+        }, 20000)
     
         return () => {
             clearTimeout(emojiTimeout)
