@@ -33,8 +33,8 @@ function Hero() {
         scale = 0.5
         position = [1.4, -0.5, 2.5]
     } else if (isXLMonitor) {
-        scale = 0.5
-        position = [1.5, -0.3, 2.3]
+        scale = 1
+        position = [1.5, -2, 2.3]
     }
 
     useEffect(() => {
@@ -65,22 +65,20 @@ function Hero() {
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault />
                         <ambientLight intensity={1.5} />
-                        <directionalLight castShadow position={[20, 80, 12]} intensity={2} />
-                        {/* <OrbitControls
+                        <directionalLight castShadow position={[20, 50, 10]} intensity={3} />
+                        <OrbitControls
                             enableZoom={true}
                             minDistance={10}
-                            maxDistance={50}
-                        /> */}
+                            maxDistance={70}
+                        />
 
                         <HeroCamera>
-                        
                             <HackerRoom
                                 scale={scale}
-                                // position={position}
+                                position={position}
                                 // rotation={rotation}
                                 debug={true}
                             />
-                        
                         </HeroCamera>
 
                     </Suspense>
