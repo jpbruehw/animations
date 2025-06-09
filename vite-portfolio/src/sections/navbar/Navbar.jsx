@@ -1,7 +1,6 @@
 import { useState } from "react"
 import Dropdown from "./Dropdown"
 import classNames from "classnames";
-import DecryptedText from "../../blocks/TextAnimations/DecryptedText/DecryptedText";
 import "../../custom-styles/animated-header-tag.css"
 import NavbarHeader from "./NavbarHeader"
 

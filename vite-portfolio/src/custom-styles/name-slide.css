@@ -26,3 +26,19 @@
     transform: translateX(0); /* centered */
   }
 }
+
+.wrapper-fade-in {
+  opacity: 0;
+  animation: fadeInSmooth 0.35s ease-out forwards;
+}
+
+@keyframes fadeInSmooth {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

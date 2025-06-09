@@ -9,6 +9,7 @@ import { useMediaQuery } from "react-responsive"
 import "../../custom-styles/animated-header-tag.css"
 import { useState, useEffect } from "react"
 import HeroCamera from "./HeroCamera.jsx"
+import HeroButton from "../../components/HeroButton.jsx"
 
 function Hero() {
 
@@ -34,27 +35,19 @@ function Hero() {
         position = [1.4, -0.5, 2.5]
     } else if (isXLMonitor) {
         scale = 1
-        position = [1.5, -2, 2.3]
+        position = [1.5, 0.6, 2.3]
     }
 
     useEffect(() => {
-        const firstTimeout = setTimeout(() => {
-            setActive(false); // 
-            const secondTimeout = setTimeout(() => {
-                setActive(true); 
-                const thirdTimeout = setTimeout(() => {
-                    setActive(false);
-                }, 350);
-                return () => clearTimeout(thirdTimeout);
-            }, 350);
-            return () => clearTimeout(secondTimeout);
-        }, 4500);
-        return () => clearTimeout(firstTimeout);
+        const introTimeout = setTimeout(() => {
+            setActive(false)
+        }, 3000);
+        return () => clearTimeout(introTimeout);
     }, []);
 
     return (
         <section className="min-h-screen w-full flex flex-col relative transform-gpu"> 
-            <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
+            <div className="w-full mx-auto flex flex-col sm:mt-30 mt-20 c-space gap-3">
                 <div className="hero-heading-wrapper z-20">
                     <h1 className={`hero-heading ${active ? "active": ""} ${isMobile && "ml-2"}`} data-heading="I Create Value w/ Data & Technology">I Create Value w/ Data & Technology</h1>
                 </div>
@@ -66,24 +59,29 @@ function Hero() {
                         <PerspectiveCamera makeDefault />
                         <ambientLight intensity={1.5} />
                         <directionalLight castShadow position={[20, 50, 10]} intensity={3} />
-                        <OrbitControls
-                            enableZoom={true}
-                            minDistance={10}
-                            maxDistance={70}
-                        />
-
-                        <HeroCamera>
+                        
+                        {!isMobile &&
+                            <OrbitControls
+                                enableZoom={true}
+                                minDistance={10}
+                                maxDistance={70}
+                            />}
+                        <HeroCamera isMobile={isMobile}>
                             <HackerRoom
                                 scale={scale}
                                 position={position}
                                 // rotation={rotation}
-                                debug={true}
+                                debug={false}
                             />
                         </HeroCamera>
 
                     </Suspense>
                 </Canvas>
-                
+            </div>
+            <div className="left-0 right-0 w-full z-10">
+                <a className="w-fit">
+                    Contact
+                </a>
             </div>
         </section>
     )
