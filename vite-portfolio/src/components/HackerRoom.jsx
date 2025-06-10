@@ -6,13 +6,6 @@ export default function HackerRoom({ scale, position, rotation, debug = true }) 
     const group = useRef()
     const { scene } = useGLTF('/models/desktop/scene.gltf')
 
-  // Optional: subtle animation
-  // useFrame(() => {
-  //   if (group.current) {
-  //     group.current.rotation.y += 0.0009
-  //   }
-  // })
-
     return (
         <group ref={group} scale={scale} position={position} rotation={rotation}>
             <primitive object={scene} />

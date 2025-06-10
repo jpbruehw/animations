@@ -21,8 +21,8 @@ function Hero() {
     const [active, setActive] = useState(true)
 
     let scale = 0.4
-    let position = [1.2, 0, 2.5]
-    let rotation = [1.65, 3.1, 3.14]
+    let position = [1.5, 0, 2.5]
+    //let rotation = [1.65, 5, 5]
 
     if (isMobile) {
         scale = 0.45
@@ -35,7 +35,7 @@ function Hero() {
         position = [1.4, -0.5, 2.5]
     } else if (isXLMonitor) {
         scale = 1
-        position = [1.5, 0.6, 2.3]
+        position = [1.5, -0.5, 2.3]
     }
 
     useEffect(() => {
@@ -58,18 +58,19 @@ function Hero() {
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault />
                         <ambientLight intensity={1.5} />
-                        <directionalLight castShadow position={[20, 50, 10]} intensity={3} />
+                        <directionalLight castShadow position={[20, 50, 10]} intensity={3.5} />
                         
-                        {!isMobile &&
+                        {/* {!isMobile &&
                             <OrbitControls
                                 enableZoom={true}
                                 minDistance={10}
                                 maxDistance={70}
-                            />}
+                            />} */}
                         <HeroCamera isMobile={isMobile}>
                             <HackerRoom
                                 scale={scale}
                                 position={position}
+                                rotation={[0.265, 0, 0]}
                                 // rotation={rotation}
                                 debug={false}
                             />
@@ -78,9 +79,9 @@ function Hero() {
                     </Suspense>
                 </Canvas>
             </div>
-            <div className="left-0 right-0 w-full z-10">
+            <div className="absolute bottom-7 left-0 right-0 w-full z-10">
                 <a className="w-fit">
-                    Contact
+                    <HeroButton name="Let's connect" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
                 </a>
             </div>
         </section>
