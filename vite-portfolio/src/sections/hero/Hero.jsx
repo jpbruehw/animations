@@ -26,7 +26,7 @@ function Hero() {
 
     if (isMobile) {
         scale = 0.45
-        position = [0.8, -1, 2.8]
+        position = [0.8, -1, 1.5]
     } else if (isLaptop) {
         scale = 0.4
         position = [1.2, -0.5, 2.8]
