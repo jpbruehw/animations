@@ -40,7 +40,7 @@ function HeroNameWithEmoji() {
                     <div className="font-bold h-[2rem] text-2xl z-[250]">
                         {showText
                         &&
-                        <div className="w-full wrapper-fade-in">
+                        <div className="w-full wrapper-fade-in text-[#333446]">
                             <DecryptedText
                                 text="Hi, I am Jean-Philipp"
                                 speed={100}

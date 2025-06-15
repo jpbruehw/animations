@@ -4,7 +4,6 @@ import HackerRoom from "../../components/HackerRoom.jsx"
 import { OrbitControls} from '@react-three/drei'
 import { Suspense } from "react"
 import CanvasLoader from "../../components/CanvasLoader.jsx"
-//import { Leva, useControls } from "leva"
 import { useMediaQuery } from "react-responsive"
 import "../../custom-styles/animated-header-tag.css"
 import { useState, useEffect } from "react"
