@@ -8,7 +8,7 @@ import { useMediaQuery } from "react-responsive"
 import "../../custom-styles/animated-header-tag.css"
 import { useState, useEffect } from "react"
 import HeroCamera from "./HeroCamera.jsx"
-import HeroButton from "../../components/HeroButton.jsx"
+// import HeroButton from "../../components/HeroButton.jsx"
 
 function Hero() {
 
@@ -78,11 +78,11 @@ function Hero() {
                     </Suspense>
                 </Canvas>
             </div>
-            <div className="absolute bottom-7 left-0 right-0 w-full z-10">
+            {/* <div className="absolute bottom-7 left-0 right-0 w-full z-10">
                 <a className="w-fit">
                     <HeroButton name="Let's connect" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
                 </a>
-            </div>
+            </div> */}
         </section>
     )
 }

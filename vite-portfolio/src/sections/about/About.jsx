@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect, useRef, useState } from 'react';
 import { useMediaQuery } from "react-responsive"
 import classNames from "classnames";
+import ContactButton from '../../components/ContactButton';
 
 /** TODOS
  *  Add multilingual card
@@ -76,10 +77,10 @@ useEffect(() => {
 
     return (
         <section className="c-space my-20">
-            <div className="grid xl:gird-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
+            <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
-                        <img src="/assets/grid-1.png" alt="grid-1" className="w-full h-fit object-contain" />
+                        <img src="/assets/grid-1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
                         <div>
                             <p className="grid-headtext">Hey there, nice to meet you...</p>
                             <p className="grid-subtext">
@@ -90,17 +91,17 @@ useEffect(() => {
                 </div>
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
-                        <img src="/assets/grid-2.png" alt="grid-2" className="w-full h-fit md:max-h-[450px] md:mb-4 object-contain"/>
+                        <img src="/assets/grid-2.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain"/>
                         <div>
                             <p className="grid-headtext">Do you ever think to yourself: "Hmm, we can do this better"?</p>
                             <p className="grid-subtext">
                                 Me too, and by asking that question I have become an expert at making businesses money with technology and data. Many organization today find themselves at the crossroads of <strong>technology, data, and innovation. </strong> 
-                                I deliver results by harnessing all three, starting first and foremost with the business case.
+                                I deliver results by harnessing all three, starting first and foremost with the business case. className="w-full h-fit md:max-h-[450px] md:mb-4 object-contain"
                             </p>
                         </div>
                     </div>
                 </div>
-                <div className="col-span-1 xl:row-span-3">
+                <div className="col-span-1 xl:row-span-4">
                     <div className="grid-container">
                         <div ref={ref} className="rounded-3xl w-full sm:h-[326px] sm:mt-20 h-fit flex justify-center items-center">
                             {shouldRender && (
@@ -129,12 +130,27 @@ useEffect(() => {
                                 To lead effectively and better anticipate your competition, understanding of the cultural, economic, and political context is key. My continent crossing experience means I can effectively 
                                 adapt to, connect with, and operate successfully with people from any background.
                             </p>
+                            <ContactButton name="Get in Touch" isBeam containerClass="w-full mt-10"/>
                         </div>
                     </div>
                 </div>
-                <div className="cl:col-span-2 xl:row-span-3">
+                <div className="xl:col-span-2 xl:row-span-3">
                     <div className="grid-container">
-
+                        <img src="/assets/grid-3.svg" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain"
+                        />
+                        <p className="grid-headtext">Multilingual: On and Off the Keyboard.</p>
+                        <p className="grid-subtext">
+                            Expert in programming languages like python etc. then talk about the languages you know.
+                        </p>
+                    </div>
+                </div>
+                <div className="xl:col-span-1 xl:row-span-2">
+                    <div className="grid-container">
+                        <img src="/assets/grid-4-new.svg" alt="grid-4" className="w-full md:h-[170px] sm:h-[276px] h-fit object-cover sm:object-top"/>
+                        <p className="grid-headtext">Analytic Expertise that Powers Profitable Decision Making.</p>
+                        <p className="grid-subtext">
+                            Write here about analytic expertise and how it leads to better outcomes etc.
+                        </p>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 
-const HeroButton = ({ name, isBeam = false, containerClass }) => {
+const ContactButton = ({ name, isBeam = false, containerClass }) => {
   return (
     <button className={`btn ${containerClass}`}>
       {isBeam && (
@@ -13,4 +13,4 @@ const HeroButton = ({ name, isBeam = false, containerClass }) => {
   )
 }
 
-export default HeroButton
+export default ContactButton
