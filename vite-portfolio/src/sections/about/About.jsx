@@ -11,7 +11,7 @@ import ContactButton from '../../components/ContactButton';
  *  Rearrange the cards to highlight skills
  *  Add mobile styling to globe
  *  make sure the layout looks like the tutorial
- *  consider getting rid of contact button at top
+ *  get the globe spinning slowly
  */
 
 const About = () => {

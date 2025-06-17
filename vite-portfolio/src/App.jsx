@@ -1,6 +1,7 @@
 import Navbar from './sections/navbar/Navbar'
 import Hero from './sections/hero/Hero'
 import About from './sections/about/About'
+import Projects from './sections/projects/Projects'
 
 const App = () => {
     //adjust max width here later
@@ -9,6 +10,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
+      <Projects />
     </main>
   )
 }
