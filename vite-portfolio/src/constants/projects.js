@@ -207,5 +207,54 @@ export const myProjects = [
                 path: "/assets/projects/tags/html-css.svg"
             }
         ]
+    },
+    {
+        title: "Predicting Mutual Fund Performance with Machine Learning Algorithms",
+        desc: "Mutual funds chase alpha. Investors chase mutual funds that chase alpha. What factors drive outperformance? Can you predict it? That is exactly the question we asked here in this paper I co-authored, investigating the power of machine learning models to predict the performance of actively managed mutual funds.",
+        subDesc: "Built case study with Python, Pandas, Numpy, Scipy, Pytorch, Anaconda, and Spyder IDE",
+        logo: "/assets/projects/logos/mutual-funds.svg",
+        logoStyle: {
+            // backgroundColor: '#2A1816',
+            border: '0.2px solid #36201D',
+            boxShadow: '0px 0px 60px 0px #AA3C304D',
+        },
+        spotlight: "/assets/projects/spotlights/spotlight1.png",
+        tags: [
+            {
+                id: 1,
+                name: "Python",
+                path: "/assets/projects/tags/python.svg"
+            },
+            {
+                id: 2,
+                name: "Pandas",
+                path: "/assets/projects/tags/pandas.svg"
+            },
+            {
+                id: 3,
+                name: "Numpy",
+                path: "/assets/projects/tags/numpy.svg"
+            },
+            {
+                id: 4,
+                name: "PyTorch",
+                path: "/assets/projects/tags/pytorch.svg"
+            },
+            {
+                id: 5,
+                name: "SciPy",
+                path: "/assets/projects/tags/scipy.svg"
+            },
+            {
+                id: 6,
+                name: "Anaconda",
+                path: "/assets/projects/tags/conda.svg"
+            },
+            {
+                id: 7,
+                name: "Spyder IDE",
+                path: "/assets/projects/tags/spyder.svg"
+            }
+        ]
     }
 ]
