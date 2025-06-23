@@ -5,7 +5,7 @@ export function DemoComputer(props) {
     const group = useRef()
     const { nodes, materials } = useGLTF('/models/demo-computer/computer.glb')
 //  const { actions } = useAnimations(animations, group)
-    // const txt = useVideoTexture()
+     const txt = useVideoTexture("/projects/textures/caesar-cipher-vid.mp4")
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -20,7 +20,7 @@ export function DemoComputer(props) {
           rotation={[1.571, -0.005, 0.031]}
           scale={[0.661, 0.608, 0.401]}
         >
-            {/* <meshBasicMaterial map={txt} /> */}
+            <meshBasicMaterial map={txt} />
         </mesh>
         <group
           name="RootNode"

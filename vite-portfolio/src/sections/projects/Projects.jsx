@@ -67,7 +67,7 @@ function Projects() {
                         <div className="flex items-center gap-4">
                             {currentProject.tags.map((tag) => (
                                 <div key={tag.id} className="tech-logo">
-                                    <img src={tag.path} alt={tag.name} className="rounded-lg"/>
+                                    <img src={tag.path} alt={tag.name} className="rounded-lg" />
                                 </div>
                             ))}
                             <div className="flex flex-col items-end justify-center gap-2 ml-4">
