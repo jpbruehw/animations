@@ -1,15 +1,10 @@
-/**
- *  TODOS:
- *  List projects in the same way as structured here - you can probably recycle from previous 
- *  add the blackjack game below this
- */
 import { Suspense, useState } from "react";
 import { myProjects } from "../../constants/projects"
 import { Canvas } from "@react-three/fiber";
 import { Center, OrbitControls } from "@react-three/drei";
 import CanvasLoader from "../../components/CanvasLoader.jsx"
 import DemoComputer from "../../components/DemoComputer.jsx";
-import { useMediaQuery } from "react-responsive";
+import { useIsMobile } from "../../hooks/useIsMobile.js";
 
 const projectCount = myProjects.length
 
@@ -42,8 +37,8 @@ function Projects() {
                         </>
                     );
 
-    const isSmallMedScreen = useMediaQuery({ maxWidth: 1920 })
-
+    const isMobile = useIsMobile()
+    console.log(isMobile)
     
     return (
         <section className="c-space my-20">
@@ -77,11 +72,11 @@ function Projects() {
                             <div className=
                                 "flex flex-row items-center justify-start gap-4 mt-6"
                             >
-                                <a href={currentProject.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer text-white-600">
+                                <a href={currentProject.href} target="_blank" rel="noopener noreferrer" className="flex items-center text-lg gap-2 cursor-pointer text-white-600">
                                     <p>{currentProject.isData ? "View Report" : "View Demo"}</p>
                                     <img src="assets/arrow-up.png" alt="arrow-up" className="w-3 h-3"/>
                                 </a>
-                                <a href={currentProject.githubHref} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer text-white-600">
+                                <a href={currentProject.githubHref} target="_blank" rel="noopener noreferrer" className="flex items-center text-lg gap-2 cursor-pointer text-white-600">
                                     <p>View on GitHub</p>
                                     <img src="assets/arrow-up.png" alt="arrow-up" className="w-3 h-3"/>
                                 </a>
@@ -102,7 +97,7 @@ function Projects() {
                             <directionalLight position={[10, 10, 5]} />
                             <Center>
                                 <Suspense fallbackBack={<CanvasLoader />} />
-                                <group scale={1.5} position={[-0.8, -1.75, 0.75]} rotation={[0, -0.3, 0]}>
+                                <group scale={isMobile ? 1.65 : 1.85} position={[-2.35, -1.4, 0.75]} rotation={[0, -0.14, 0]}>
                                     <DemoComputer texture={currentProject.texture} />
                                 </group>
                             </Center>

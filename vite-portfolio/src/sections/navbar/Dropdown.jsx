@@ -35,8 +35,3 @@ const Dropdown = ({ isOpen, setIsOpen }) => {
 };
 
 export default Dropdown;
-
-
-className="flex flex-col items-end justify-center gap-2 ml-4"
-
-flex items-center justify-between flex-wrap gap-5
