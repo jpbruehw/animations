@@ -9,6 +9,7 @@ import { Canvas } from "@react-three/fiber";
 import { Center, OrbitControls } from "@react-three/drei";
 import CanvasLoader from "../../components/CanvasLoader.jsx"
 import DemoComputer from "../../components/DemoComputer.jsx";
+import { useMediaQuery } from "react-responsive";
 
 const projectCount = myProjects.length
 
@@ -41,6 +42,8 @@ function Projects() {
                         </>
                     );
 
+    const isSmallMedScreen = useMediaQuery({ maxWidth: 1920 })
+
     
     return (
         <section className="c-space my-20">
@@ -51,7 +54,7 @@ function Projects() {
                 <p className="projects-subtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit quisquam tempora iusto, ipsam quos beatae pariatur eius deleniti atque fuga, officiis voluptate voluptas quas corrupti. Deleniti inventore magnam ex!</p>
             </div>
             <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
-                <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
+                <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200 rounded-xl">
                     <div className="absolute top-0 right-0">
                         <img src={currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover rounded-xl"/>
                     </div>
@@ -63,14 +66,17 @@ function Projects() {
                         <p className="animatedText">{currentProject.desc === "" ? cvxpyDesc : currentProject.desc}</p>
                         <p className="animatedText">{currentProject.subDesc}</p>
                     </div>
-                    <div className="flex items-center justify-between flex-wrap gap-5">
-                        <div className="flex items-center gap-4">
-                            {currentProject.tags.map((tag) => (
-                                <div key={tag.id} className="tech-logo">
-                                    <img src={tag.path} alt={tag.name} className="rounded-lg" />
-                                </div>
-                            ))}
-                            <div className="flex flex-col items-end justify-center gap-2 ml-4">
+                    <div className="flex flex-col flex-wrap justify-center gap-4">
+                            <div className="flex items-center flex-wrap justify-start gap-4">
+                                {currentProject.tags.map((tag) => (
+                                    <div key={tag.id} className="tech-logo">
+                                        <img src={tag.path} alt={tag.name} className="rounded-lg" />
+                                    </div>
+                                ))}
+                            </div>
+                            <div className=
+                                "flex flex-row items-center justify-start gap-4 mt-6"
+                            >
                                 <a href={currentProject.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer text-white-600">
                                     <p>{currentProject.isData ? "View Report" : "View Demo"}</p>
                                     <img src="assets/arrow-up.png" alt="arrow-up" className="w-3 h-3"/>
@@ -80,7 +86,6 @@ function Projects() {
                                     <img src="assets/arrow-up.png" alt="arrow-up" className="w-3 h-3"/>
                                 </a>
                             </div>
-                        </div>
                     </div>
                     <div className="flex justify-between items-center mt-7">
                         <button className="arrow-btn" onClick={() => handleNavigation('previous')}>
@@ -90,20 +95,20 @@ function Projects() {
                             <img src="/assets/right-arrow.png" alt="left arrow" className="w-4 h-4" />
                         </button>
                     </div>
-                    <div className="border border-black-300 rounded-lg h-96 md:h-full">
+                </div>
+                    <div className="border bg-black border-black-300 rounded-lg h-96 md:h-full shadow-2xl shadow-black-200">
                         <Canvas>
                             <ambientLight intensity={3} />
                             <directionalLight position={[10, 10, 5]} />
                             <Center>
                                 <Suspense fallbackBack={<CanvasLoader />} />
-                                <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
+                                <group scale={1.5} position={[-0.8, -1.75, 0.75]} rotation={[0, -0.3, 0]}>
                                     <DemoComputer texture={currentProject.texture} />
                                 </group>
                             </Center>
                             <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
                         </Canvas>
                     </div>
-                </div>
             </div>
         </section>
     )

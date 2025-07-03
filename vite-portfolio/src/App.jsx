@@ -6,7 +6,7 @@ import Projects from './sections/projects/Projects'
 const App = () => {
     //adjust max width here later
   return (
-    <main className="mx-auto">
+    <main className="mx-auto max-w-[1750px]">
       <Navbar />
       <Hero />
       <About />
