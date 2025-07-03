@@ -13,6 +13,7 @@ export const myProjects = [
             boxShadow: '0px 0px 60px 0px #AA3C304D',
         },
         spotlight: "/projects/spotlights/spotlight1.png",
+        texture: "/projects/textures/jobworx-vid.mp4",
         tags: [
             {
                 id: 1,
@@ -60,6 +61,7 @@ export const myProjects = [
             boxShadow: '0px 0px 60px 0px #AA3C304D',
         },
         spotlight: "/projects/spotlights/spotlight2.png",
+        texture: "/projects/textures/caesar-cipher-vid.mp4",
         tags: [
             {
                 id: 1,
@@ -97,6 +99,7 @@ export const myProjects = [
             boxShadow: '0px 0px 60px 0px #AA3C304D',
         },
         spotlight: "/projects/spotlights/spotlight3.png",
+        texture: "/projects/textures/ml-mutual-funds.mp4",
         tags: [
             {
                 id: 1,
@@ -144,6 +147,7 @@ export const myProjects = [
             boxShadow: '0px 0px 60px 0px #AA3C304D',
         },
         spotlight: "/projects/spotlights/spotlight4.png",
+        texture: "/projects/textures/strategic-asset-allocation.mp4",
         tags: [
             {
                 id: 1,
@@ -191,6 +195,7 @@ export const myProjects = [
             boxShadow: '0px 0px 60px 0px #AA3C304D',
         },
         spotlight: "/projects/spotlights/spotlight5.png",
+        texture: "/projects/textures/typeframe-vid.mp4",
         tags: [
             {
                 id: 1,
@@ -223,6 +228,7 @@ export const myProjects = [
             boxShadow: '0px 0px 60px 0px #AA3C304D',
         },
         spotlight: "/projects/spotlights/spotlight1.png",
+        texture: "/projects/textures/ml-mutual-funds.mp4",
         tags: [
             {
                 id: 1,
