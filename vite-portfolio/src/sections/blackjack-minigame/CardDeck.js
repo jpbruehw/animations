@@ -1,9 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
-import heart from './suits/heart.svg';
-import spade from './suits/spade.svg';
-import club from './suits/club.svg';
-import diamond from './suits/diamond.svg';
-import cardBack from './suits/card-back.svg'
+import heart from '/assets/suits/heart.svg';
+import spade from '/assets/suits/spade.svg';
+import club from '/assets/suits/club.svg';
+import diamond from '/assets/suits/diamond.svg';
+import cardBack from '/assets/suits/card-back.svg'
 
 const dealerHidden = cardBack
 

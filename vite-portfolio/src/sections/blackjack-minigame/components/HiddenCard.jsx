@@ -1,5 +1,5 @@
 import { Card, CardBody } from "@heroui/card";
-import { dealerHidden } from "../assets/CardDeck";
+import { dealerHidden } from "../CardDeck";
 
 export default function HiddenCard() {
     return (

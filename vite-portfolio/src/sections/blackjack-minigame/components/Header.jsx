@@ -1,5 +1,5 @@
 import { Image } from "@heroui/image";
-import headerImg from "/header.svg"
+import headerImg from "/assets/header.svg"
 
 const Header = ({ className }) => {
     return (

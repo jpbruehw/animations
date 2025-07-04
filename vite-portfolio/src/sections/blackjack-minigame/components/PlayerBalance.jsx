@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import CountUp from "../blocks/TextAnimations/CountUp/CountUp";
-import GradientText from "../blocks/TextAnimations/GradientText/GradientText";
+import CountUp from "@/blocks/TextAnimations/CountUp/CountUp";
+import GradientText from "@/blocks/TextAnimations/GradientText/GradientText";
 
 export default function PlayerBalance({ balance, result }) {
     const prevBalanceRef = useRef(0);
