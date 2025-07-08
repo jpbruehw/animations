@@ -3,6 +3,7 @@ import Hero from './sections/hero/Hero'
 import About from './sections/about/About'
 import Projects from './sections/projects/Projects'
 import BlackjackWrapper from './sections/blackjack-minigame/BlackjackWrapper'
+import Highlights from './sections/highlights/Highlights'
 
 const App = () => {
     //adjust max width here later
@@ -13,6 +14,7 @@ const App = () => {
       <About />
       <Projects />
       <BlackjackWrapper />
+      <Highlights />
     </main>
   )
 }
