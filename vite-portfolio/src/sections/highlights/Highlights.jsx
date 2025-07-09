@@ -1,5 +1,12 @@
 import { highlights } from "../../constants/highlights"
 
+/* TODOS
+    - add a section for the links
+    - complete the highlights.js file
+    - add short explainer text snippet
+
+*/
+
 function Highlights() {
     return (
         <section className="c-space mt-20 pb-4 bg-[#333446]">

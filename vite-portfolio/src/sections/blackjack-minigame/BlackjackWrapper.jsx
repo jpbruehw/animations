@@ -1,5 +1,10 @@
 import BlackjackGame from "./Blackjack"
 
+/* TODOS
+    - correct the height and make formatting for mobile work
+    - implement the logic to keep track of a high score
+*/
+
 function BlackjackWrapper() {
     return (
         <section className="flex flex-col items-center justify-center w-full h-screen">
