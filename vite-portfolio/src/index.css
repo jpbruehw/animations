@@ -9,7 +9,7 @@
 }
 
 body {
-  background: #333446;
+  background-color: #333446;
   font-family: 'General Sans', sans-serif;
 }
 
@@ -90,8 +90,8 @@ body {
     @apply w-14 h-14  backdrop-filter backdrop-blur-lg flex justify-center items-center;
   }
 
-  /* clients section */
-  .client-container {
+  /* highlights section */
+  .highlights-container {
     @apply grid md:grid-cols-2 grid-cols-1 gap-5 mt-12;
   }
 
@@ -99,7 +99,7 @@ body {
     @apply rounded-lg md:p-10 p-5 col-span-1 bg-black-300 bg-opacity-50;
   }
 
-  .client-content {
+  .highlights-content {
     @apply flex lg:flex-row flex-col justify-between lg:items-center items-start gap-5 mt-7;
   }
 

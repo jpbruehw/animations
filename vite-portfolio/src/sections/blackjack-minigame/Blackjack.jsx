@@ -1,4 +1,3 @@
-//import './App.css'
 import { useState, useEffect } from 'react'
 import { imgCombos } from './CardDeck'
 import BlackjackButton from './components/BlackjackButton'

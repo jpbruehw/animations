@@ -8,7 +8,7 @@ import Highlights from './sections/highlights/Highlights'
 const App = () => {
     //adjust max width here later
   return (
-    <main className="mx-auto max-w-[1750px]">
+    <main className="mx-auto max-w-[1750px] bg-[#333446]">
       <Navbar />
       <Hero />
       <About />
