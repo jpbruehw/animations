@@ -35,7 +35,7 @@ export const highlights = [
         subheader: 'Nominated for 2025 cohort, winners announced Sept. 2025.',
         img: '/highlights/swisslife.svg',
         desc:
-        'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
+            'My master\'s thesis (written in LaTeX), Predicting US Recessions with Machine Learning (5.5/6), was nominated for this prestigious prize. In my thesis, I explored the relationship between various economic indicators and recessions. I then compared the performance of traditional logistic regression models with machine learning models to evaluate the respective models\' predictive power. My findings strongly suggest machine learning models are better predictors of forthcoming recessions than traditional modelling techniques.',
         links: [
             {
                 id: 1,
@@ -58,8 +58,15 @@ export const highlights = [
         id: 4,
         header: 'Open Source Software Creator',
         subheader: 'Created the AU/ROC Curve Utilities data analysis python package.',
-        img: 'assets/review4.png',
+        img: '/highlights/open-source.svg',
         desc:
-        'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
+            'Often the best innovation comes from solving your own problems, which is why I built and published an open source data analytics package that filled a critical hole in the market. With this package, it has never been easier to compare classification models using AU/ROC curves. This package directly recreates AU/ROC analytic techniques from academia and provides them to users out of the box. Now, researchers can compare their models\' performances with a few lines of code, rather than having to rewrite boilerplate code over and over.',
+        links: [
+            {
+                id: 1,
+                text: 'GitHub Repo',
+                href: 'https://github.com/jpbruehw/research-roc-utils'
+            }
+        ]
     },
 ];
