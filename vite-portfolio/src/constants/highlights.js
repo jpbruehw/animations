@@ -9,7 +9,7 @@ export const highlights = [
         links: [
             {
                 id: 1,
-                text: 'LinkedIn Post',
+                text: 'Announcement',
                 href: 'https://www.linkedin.com/posts/mscbf_nextgeneration-saxobeinvested-activity-7039594445792509952-Cyzi/?utm_source=share&utm_medium=member_desktop'
             }
         ]
@@ -44,7 +44,7 @@ export const highlights = [
             },
             {
                 id: 2,
-                text: 'Read Report',
+                text: 'Read Thesis',
                 href: 'https://drive.google.com/file/d/1xIuXDUn-J9_CYk0OdG4s8mzdy6GQNIZm/view'
             },
             {
@@ -57,7 +57,7 @@ export const highlights = [
     {
         id: 4,
         header: 'Open Source Software Creator',
-        subheader: 'Created the AU/ROC Curve Utilities data analysis python package.',
+        subheader: 'Created the AU/ROC Curve Utilities data analysis Python package.',
         img: '/highlights/open-source.svg',
         desc:
             'Often the best innovation comes from solving your own problems, which is why I built and published an open source data analytics package that filled a critical hole in the market. With this package, it has never been easier to compare classification models using AU/ROC curves. This package directly recreates AU/ROC analytic techniques from academia and provides them to users out of the box. Now, researchers can compare their models\' performances with a few lines of code, rather than having to rewrite boilerplate code over and over.',

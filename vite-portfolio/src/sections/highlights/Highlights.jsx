@@ -1,5 +1,6 @@
 import { highlights } from "../../constants/highlights"
 import { Button as HeroUIButton } from "@heroui/button";
+import { useIsMobile } from "../../hooks/useIsMobile";
 
 /* TODOS
     - add a section for the links
@@ -9,15 +10,18 @@ import { Button as HeroUIButton } from "@heroui/button";
 */
 
 function Highlights() {
+
+    const isMobile = useIsMobile()
+
     return (
-        <section className="c-space mt-12 pb-12 bg-[#333446]">
+        <section className={`${!isMobile ? "mt-8" : ""} c-space pb-12`}>
             <h3 className="head-text mb-2">Personal Highlights</h3>
             <p className="projects-subtext">
-                    Is success luck or skill? I would argue that it is a mix of both. <b>However, the harder you work, the luckier you get.</b> 
+                    I believe the moment you stop learning and striving for excellence, you start to stagnate. Below are some personal highlights that exemplify this mantra.
                 </p>
             <div className="highlights-container bg-[#333446]">
                 {highlights.map((item) => (
-                    <div key={`review-${item.id}`} className="client-review">
+                    <div key={`review-${item.id}`} className="highlight">
                         <div>
                             <p className="text-white-800 font-light">{item.desc}</p>
 
@@ -26,17 +30,16 @@ function Highlights() {
                                     <img src={item.img} alt="highlight" className="w-14 h-14 rounded-full" />
                                     <div className="flex flex-col">
                                         <p className="font-semibold text-white-800 mb-1">{item.header}</p>
-                                        <p className="text-white-500 md:text-base text-sm font-light">{item.subheader}</p>
+                                        <p className="text-white-600 md:text-base text-sm">{item.subheader}</p>
                                     </div>
                                 </div>
                             </div>
                             {item.links.length > 0
                                 &&
-                                <div className="flex flex-wrap items-start justify-center mt-4">
+                                <div className={`${isMobile ? "flex flex-col w-full items-center gap-3" : "flex flex-wrap items-start gap-5"} justify-center mt-4`}>
                                     {item.links.map((link) => (
-                                        <HeroUIButton className={item.links.length > 1 ? "mr-2" : ""} variant="shadow">
+                                        <HeroUIButton key={`link-${link.id}-${item.header}`} className={isMobile && "w-full"} variant="shadow">
                                             <a
-                                                key={`link-${link.id}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 href={link.href}

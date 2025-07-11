@@ -95,8 +95,8 @@ body {
     @apply grid md:grid-cols-2 grid-cols-1 gap-5 mt-12;
   }
 
-  .client-review {
-    @apply rounded-lg md:p-10 p-5 col-span-1 bg-black-300 bg-opacity-50;
+  .highlight{
+    @apply rounded-lg md:p-10 p-5 col-span-1 bg-[#7F8CAA] bg-opacity-50;
   }
 
   .highlights-content {
