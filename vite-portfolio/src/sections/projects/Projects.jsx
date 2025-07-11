@@ -38,15 +38,20 @@ function Projects() {
                     );
 
     const isMobile = useIsMobile()
-    console.log(isMobile)
     
     return (
         <section className="c-space my-20">
-            <div className="">
-                <p className="head-text">
+            <div>
+                <p className={`${isMobile ? "h-[75px]" : "h-12"} head-text mb-2"`}>
                     Some of my favorite projects
                 </p>
-                <p className="projects-subtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit quisquam tempora iusto, ipsam quos beatae pariatur eius deleniti atque fuga, officiis voluptate voluptas quas corrupti. Deleniti inventore magnam ex!</p>
+                <p className="projects-subtext">
+                    In today's world, technology and data are both vital components of almost every strategic maneuver an organization makes. However, understanding the cross-section between data, technology, and strategy is often a challenge.
+                </p>
+                <br />
+                <p className="projects-subtext">
+                    In other words, business needs to understand technology, and technology needs to understand business. Threading this needle is often difficult. Through my many years of experience driving strategic excellence and my deep technical skills, I am able to harness real business value with technology and data. Check out some of my favorite projects below that highlight my technical side.
+                </p>
             </div>
             <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
                 <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200 rounded-xl">
