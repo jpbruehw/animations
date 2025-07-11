@@ -2,7 +2,7 @@ export const highlights = [
     {
         id: 1,
         header: 'Saxo Bank Trading Game Winner',
-        subheader: 'Saxo Bank Sponsored Partnership with HSLU',
+        subheader: 'Saxo Bank Sponsored Partnership with HSLU.',
         img: '/highlights/saxo-bank.svg',
         desc:
             'Lead a team to win the very first Saxo Bank Trading Game award. Several teams were given a "one million CHF" to trade on the Saxo Bank platform and subsequently write a report. I lead my team to win by crafting a structured approach to decision making and conflict resolution within the team. With my system, we were able to defeat the competition through superior organization and decision quality, culminating in a 120+ page report that handily propelled us to victory.',
@@ -17,7 +17,7 @@ export const highlights = [
     {
         id: 2,
         header: 'Python Case Studies',
-        subheader: 'Collaborative Project Faculty',
+        subheader: 'Collaborative Project with Faculty.',
         img: '/highlights/case-study.svg',
         desc:
             'The world moves quickly, and organizations need to adapt in order to stay ahead of the competition. The best way to do that is by investing in people that have the skills to stay ahead. With this collaborative project, I worked with members of the HSLU faculty to develop relevant Python case studies that help future students future-proof their skill sets. Fundamentally, business needs to understand technology, and technology needs to understand business. With this project, I was able to demonstrate my aptitude in threading that needle better than my competition and prove my perspective\'s value in organizational settings.',

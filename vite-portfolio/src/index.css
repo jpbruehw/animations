@@ -19,7 +19,7 @@ body {
   }
 
   .head-text {
-    @apply sm:text-4xl text-3xl font-semibold text-gray_gradient;
+    @apply sm:text-4xl h-12 text-3xl font-semibold text-gray_gradient;
   }
 
   .nav-ul {
@@ -92,7 +92,7 @@ body {
 
   /* highlights section */
   .highlights-container {
-    @apply grid md:grid-cols-2 grid-cols-1 mt-12;
+    @apply grid md:grid-cols-2 grid-cols-1 gap-5 mt-12;
   }
 
   .client-review {
