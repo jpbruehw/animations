@@ -17,10 +17,10 @@ export const highlights = [
     {
         id: 2,
         header: 'Python Case Studies',
-        subheader: 'Collaborative Project with HSLU Faculty',
+        subheader: 'Collaborative Project Faculty',
         img: '/highlights/case-study.svg',
         desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            'The world moves quickly, and organizations need to adapt in order to stay ahead of the competition. The best way to do that is by investing in people that have the skills to stay ahead. With this collaborative project, I worked with members of the HSLU faculty to develop relevant Python case studies that help future students future-proof their skill sets. Fundamentally, business needs to understand technology, and technology needs to understand business. With this project, I was able to demonstrate my aptitude in threading that needle better than my competition and prove my perspective\'s value in organizational settings.',
         links: [
             {
                 id: 1,
@@ -31,16 +31,33 @@ export const highlights = [
     },
     {
         id: 3,
-        header: 'John Dohsas',
-        subheader: 'Project Manager at UrbanTech ',
-        img: 'assets/review3.png',
+        header: 'Swiss Life Study Award Nominee',
+        subheader: 'Nominated for 2025 cohort, winners announced Sept. 2025.',
+        img: '/highlights/swisslife.svg',
         desc:
         'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
+        links: [
+            {
+                id: 1,
+                text: 'GitHub Repo',
+                href: 'https://github.com/jpbruehw/predicting-us-recession-with-ml/tree/main'
+            },
+            {
+                id: 2,
+                text: 'Read Report',
+                href: 'https://drive.google.com/file/d/1xIuXDUn-J9_CYk0OdG4s8mzdy6GQNIZm/view'
+            },
+            {
+                id: 3,
+                text: 'Study Award Info',
+                href: 'https://ch.swisslife-am.com/de/home/ueber-uns/sponsorships/swiss-life-study-award.html'
+            }
+        ]
     },
     {
         id: 4,
-        header: 'Ether Smith',
-        subheader: 'CEO of BrightStar Enterprises',
+        header: 'Open Source Software Creator',
+        subheader: 'Created the AU/ROC Curve Utilities data analysis python package.',
         img: 'assets/review4.png',
         desc:
         'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
