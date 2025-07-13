@@ -151,7 +151,7 @@ body {
 
   /*  footer */
   .social-icon {
-    @apply w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200;
+    @apply h-10 w-10 sm:h-12 sm:w-12  rounded-full flex justify-center items-center border border-black-200;
   }
 }
 
