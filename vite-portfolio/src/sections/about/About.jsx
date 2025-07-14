@@ -2,8 +2,6 @@
 import Globe from 'react-globe.gl';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useRef, useState } from 'react';
-import { useMediaQuery } from "react-responsive"
-import classNames from "classnames";
 import ContactButton from '../../components/ContactButton';
 
 /** TODOS
@@ -12,6 +10,7 @@ import ContactButton from '../../components/ContactButton';
  *  Add mobile styling to globe
  *  make sure the layout looks like the tutorial
  *  get the globe spinning slowly
+ *  add a header to this and a little desc blurb
  */
 
 const About = () => {
@@ -19,8 +18,6 @@ const About = () => {
     const [shouldRender, setShouldRender] = useState(false);
     const { ref, inView } = useInView({ triggerOnce: true });
     const globeRef = useRef();
-
-    const isMobile = useMediaQuery({ maxWidth: 768 })
 
     const points = [
   {

@@ -74,7 +74,6 @@ function Hero() {
                                 debug={false}
                             />
                         </HeroCamera>
-
                     </Suspense>
                 </Canvas>
             </div>
