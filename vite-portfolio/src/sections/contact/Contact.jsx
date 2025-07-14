@@ -4,6 +4,12 @@ import { useRef, useState } from 'react';
 import useAlert from '../../hooks/useAlert.js';
 import Alert from '../../components/Alert.jsx';
 
+//** TODOS
+// add a new bg image for mobile screens
+// change the colors so the form inputs are a bit brighter
+// get the email client working
+// move the social links and email above the footer*/
+
 const Contact = () => {
     const formRef = useRef();
 
@@ -21,8 +27,8 @@ const Contact = () => {
         setLoading(true); 
         emailjs
             .send(
-                import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
             {
                 from_name: form.name,
                 to_name: 'JavaScript Mastery',
@@ -30,7 +36,7 @@ const Contact = () => {
                 to_email: 'sujata@jsmastery.pro',
                 message: form.message,
             },
-                import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
             )
             .then(
                 () => {
@@ -62,11 +68,11 @@ const Contact = () => {
     }   
 
     return (
-        <section className="c-space my-20" id="contact">
+        <section className="c-space mt-20 mb-10" id="contact">
             {alert.show && <Alert {...alert} />}
 
             <div className="relative min-h-screen flex items-center justify-center flex-col">
-                <img src="/assets/terminal.png" alt="terminal-bg" className="absolute inset-0 min-h-screen" />
+                <img src="/assets/terminal.png" alt="terminal" className="absolute inset-0 h-full w-full rounded-lg" />
 
                 <div className="contact-container">
                     <h3 className="head-text">Let's talk</h3>
