@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
 
+import useIsMobile from '../../hooks/useIsMobile.js';
 import useAlert from '../../hooks/useAlert.js';
 import Alert from '../../components/Alert.jsx';
 
@@ -8,7 +9,7 @@ import Alert from '../../components/Alert.jsx';
 // add a new bg image for mobile screens
 // change the colors so the form inputs are a bit brighter
 // get the email client working
-// move the social links and email above the footer*/
+// move the social links and email above the footer
 
 const Contact = () => {
     const formRef = useRef();
