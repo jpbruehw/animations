@@ -1,7 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
 
-import useIsMobile from '../../hooks/useIsMobile.js';
+import { useIsMobile } from '../../hooks/useIsMobile.js';
 import useAlert from '../../hooks/useAlert.js';
 import Alert from '../../components/Alert.jsx';
 
@@ -13,6 +13,8 @@ import Alert from '../../components/Alert.jsx';
 
 const Contact = () => {
     const formRef = useRef();
+
+    const isMobile = useIsMobile()
 
     const { alert, showAlert, hideAlert } = useAlert();
     const [loading, setLoading] = useState(false);
@@ -34,7 +36,7 @@ const Contact = () => {
                 from_name: form.name,
                 to_name: 'JavaScript Mastery',
                 from_email: form.email,
-                to_email: 'sujata@jsmastery.pro',
+                to_email: 'jpkbruehwiler@gmail.com',
                 message: form.message,
             },
                 import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
@@ -69,13 +71,13 @@ const Contact = () => {
     }   
 
     return (
-        <section className="c-space mt-20 mb-10" id="contact">
+        <section className={`c-space mb-10 ${isMobile ? "bg-black-200 mt-4 w-[90%] mx-auto rounded-lg" : "mt-10"}`} id="contact">
             {alert.show && <Alert {...alert} />}
 
             <div className="relative min-h-screen flex items-center justify-center flex-col">
-                <img src="/assets/terminal.png" alt="terminal" className="absolute inset-0 h-full w-full rounded-lg" />
+                { !isMobile && <img src="/assets/terminal.png" alt="terminal" className="absolute inset-0 h-full w-full rounded-lg" /> }
 
-                <div className="contact-container">
+                <div className={`c-space z-10 mb-8 ${isMobile ? "mt-8" : "mt-20"}`}>
                     <h3 className="head-text">Let's talk</h3>
                     <p className="text-lg text-white-600 mt-3">
                         Whether you’re looking to build a new website, improve your existing platform, or bring a unique project to
@@ -92,7 +94,7 @@ const Contact = () => {
                                 onChange={handleChange}
                                 required
                                 className="field-input"
-                                placeholder="ex., John Doe"
+                                placeholder="ex. John Doe"
                             />
                         </label>
 
@@ -105,7 +107,7 @@ const Contact = () => {
                                 onChange={handleChange}
                                 required
                                 className="field-input"
-                                placeholder="ex., johndoe@gmail.com"
+                                placeholder="ex. johndoe@gmail.com"
                             />
                         </label>
 
