@@ -4,6 +4,8 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect, useRef, useState } from 'react';
 import ContactButton from '../../components/ContactButton';
 
+import { useIsMobile } from '../../hooks/useIsMobile';
+
 /** TODOS
  *  Add multilingual card
  *  Rearrange the cards to highlight skills
@@ -20,60 +22,64 @@ const About = () => {
     const globeRef = useRef();
 
     const points = [
-  {
-    name: 'Zurich, Switzerland',
-    lat: 47.3769,
-    lng: 8.5417,
-    altitude: 0.01,
-    color: '#DA291C',
-  },
-  {
- name: "Boston, USA",
-    lat: 42.3555,
-    lng: -71.0565,
-    altitude: 0.2,
-    color: '#0A3161',
-  },
-  {
-    name: 'Barcelona, Spain',
-    lat: 41.3874,
-    lng: 2.1686,
-    altitude: 0.2,
-    color: '#F1BF00',
-  },
-  {
-    name: 'Bangkok, Thailand',
-    lat: 13.7563,
-    lng: 100.5018,
-    altitude: 0.2,
-    color: '#EF3340',
-  },
-  {
-    name: 'Valparaiso, Chile',
-    lat: -33.0473,
-    lng: -71.6127,
-    altitude: 0.2,
-    color: '#0032A0',
-  },
-]
+        {
+            name: 'Zurich, Switzerland',
+            lat: 47.3769,
+            lng: 8.5417,
+            altitude: 0.01,
+            color: '#DA291C',
+        },
+        {
+            name: "Boston, USA",
+            lat: 42.3555,
+            lng: -71.0565,
+            altitude: 0.2,
+            color: '#0A3161',
+        },
+        {
+            name: 'Barcelona, Spain',
+            lat: 41.3874,
+            lng: 2.1686,
+            altitude: 0.2,
+            color: '#F1BF00',
+        },
+        {
+            name: 'Bangkok, Thailand',
+            lat: 13.7563,
+            lng: 100.5018,
+            altitude: 0.2,
+            color: '#EF3340',
+        },
+        {
+            name: 'Valparaiso, Chile',
+            lat: -33.0473,
+            lng: -71.6127,
+            altitude: 0.2,
+            color: '#0032A0',
+        },
+    ]
 
 useEffect(() => {
-    if (inView) {
-      setShouldRender(true);
-    }
-  }, [inView]);
+        if (inView) {
+            setShouldRender(true);
+        }
+    }, [inView]);
 
-  useEffect(() => {
-    if (globeRef.current) {
-      globeRef.current.pointOfView(
-        { lat: 47.3769, lng: 8.5417}, // Zurich
-        2000 // ms transition duration
-      );
-    }
-  }, [shouldRender]);
+    useEffect(() => {
+        if (globeRef.current) {
+            globeRef.current.pointOfView(
+                { lat: 47.3769, lng: 8.5417}, // Zurich
+                2000 // ms transition duration
+            );
+        }
+    }, [shouldRender]);
+
+    const isMobile = useIsMobile()
+
+  // my-20
 
     return (
-        <section className="c-space my-20">
+        <section className={`"c-space" ${isMobile ? "-mt-60 max-w-[90%] mx-auto" : "-mt-40"}`}>
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
