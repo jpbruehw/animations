@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect, useRef, useState } from 'react';
 import ContactButton from '../../components/ContactButton';
 
+import { useMediaQuery } from 'react-responsive';
 import { useIsMobile } from '../../hooks/useIsMobile';
 
 /** TODOS
@@ -77,6 +78,10 @@ useEffect(() => {
     const isMobile = useIsMobile()
 
   // my-20
+
+    const isLaptop = useMediaQuery({ minWidth: 769, maxWidth: 1280 })
+    const isMonitor = useMediaQuery({ minWidth: 1281, maxWidth: 1600 })
+    const isXLMonitor = useMediaQuery({ minWidth: 1601 })
 
     return (
         <section className={`"c-space" ${isMobile ? "-mt-60 max-w-[90%] mx-auto" : "-mt-40"}`}>

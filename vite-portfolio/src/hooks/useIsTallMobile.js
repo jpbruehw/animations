@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 
 export function useIsTallMobile() {
-    const [isMobile, setIsMobile] = useState(() => {
+    const [isTallMobile, setIsTallMobile] = useState(() => {
         if (typeof window !== "undefined") {
-            return window.innerHeight <= 768;
+            return window.innerHeight >= 700;
         }
             return false;
     }); 
     useEffect(() => {
         const check = () => {
-            const isNowTall = window.innerHeight <= 768;
-            setIsMobile(isNowTall);
+            const isNowTall = window.innerHeight >= 700;
+            setIsTallMobile(isNowTall);
         };    
         // check screen size on mount
         // add as even listener for subsequent width changes
@@ -19,6 +19,9 @@ export function useIsTallMobile() {
         return () => {
             window.removeEventListener("resize", check);
         };
-    }, []); 
-    return isMobile;
+    }, []);
+    console.log("TALL MOBILE")
+    console.log(isTallMobile)
+    
+    return isTallMobile;
 }

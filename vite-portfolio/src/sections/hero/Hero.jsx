@@ -8,6 +8,8 @@ import { useMediaQuery } from "react-responsive"
 import "../../custom-styles/animated-header-tag.css"
 import { useState, useEffect } from "react"
 import HeroCamera from "./HeroCamera.jsx"
+
+import { useIsTallMobile } from "../../hooks/useIsTallMobile.js"
 // import HeroButton from "../../components/HeroButton.jsx"
 
 function Hero() {
@@ -19,6 +21,9 @@ function Hero() {
 
     const [active, setActive] = useState(true)
 
+    const isTallMobile = useIsTallMobile()
+
+    // default scale
     let scale = 0.4
     let position = [1.5, 0, 2.5]
     //let rotation = [1.65, 5, 5]
@@ -27,11 +32,11 @@ function Hero() {
         scale = 0.45
         position = [0.8, -1, 1.5]
     } else if (isLaptop) {
-        scale = 0.4
+        scale = 0.6
         position = [1.2, -0.5, 2.8]
     } else if (isMonitor) {
-        scale = 0.5
-        position = [1.4, -0.5, 2.5]
+        scale = 1
+        position = [1.4, -1.5, 2.5]
     } else if (isXLMonitor) {
         scale = 1
         position = [1.5, -0.5, 2.3]
@@ -52,7 +57,7 @@ function Hero() {
                 </div>
             </div>
             {/* <Leva /> */}
-            <div className="w-full h-full absolute inset-0">
+            <div className={`"w-full h-full absolute inset-0 mx-auto" ${(isTallMobile && isMobile) && "-mt-20"}`}>
                 <Canvas className="w-full h-full" shadows>
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault />
