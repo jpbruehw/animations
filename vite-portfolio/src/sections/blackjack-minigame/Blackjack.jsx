@@ -235,10 +235,10 @@ function BlackjackGame() {
     }, []);
 
     return (
-            <div className="relative w-full h-full md:h-[90%] flex items-center justify-center py-[3vh]">
+            <div className="relative w-full h-full flex items-center justify-center py-[3vh]">
                 <MouseTrail />
                 {/* Central game container */}
-                <div id="game-container" className={`transform-gpu flex flex-col justify-center items-center ${(isSmallScreen && !hasPlacedBet && !newGame) ? "animate-shrinkHeight" : isSmallScreen ? "animate-expandHeight" : "md:animate-none"} overflow-y-auto lg:overflow-y-hidden overflow-x-hidden w-[90%] max-h-[900px] max-w-5xl md:h-[100%] 2xl:h-[85%] xxl:max-h-[60%] bg-slate-600/70 rounded-2xl shadow-2xl md:p-6 p-2 gap-2 border-slate-600`}>
+                <div id="game-container" className={`transform-gpu flex flex-col justify-center items-center ${(isSmallScreen && !hasPlacedBet && !newGame) ? "animate-shrinkHeight" : isSmallScreen ? "animate-expandHeight" : "md:animate-none"}  overflow-y-auto lg:overflow-y-hidden overflow-x-hidden w-[90%] min-h-full max-w-5xl bg-slate-600/70 rounded-2xl shadow-2xl md:p-6 p-2 gap-2 border-slate-600`}>
                     {/* Alert bar */} 
                     {alertInfo && (
                         <AlertBar {...alertInfo} setAlertState={setAlertInfo} className={isSmallScreen ? "mb-2" : "mt-0"}/>

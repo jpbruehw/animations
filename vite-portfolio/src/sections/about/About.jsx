@@ -86,7 +86,7 @@ useEffect(() => {
     const isXLMonitor = useMediaQuery({ minWidth: 1601 })
 
     return (
-        <section className={`"c-space" ${(isMonitor || isLaptop) && "-mt-10"} ${(isMobile && !isTallMobile) && "-mt-60 max-w-[90%] mx-auto"} ${(isMobile && isTallMobile) && "-mt-[400px] max-w-[90%] mx-auto"} ${isXLMonitor && "-mt-80"}`}>
+        <section className={`c-space ${(isMonitor || isLaptop) && "-mt-10"} ${(isMobile && !isTallMobile) && "-mt-60 max-w-[90%] mx-auto"} ${(isMobile && isTallMobile) && "-mt-[400px]"} ${isXLMonitor && "-mt-80"}`}>
             <div>
                 <p className={`${isMobile ? "h-[75px]" : "h-12"} head-text mb-2"`}>
                     First, a bit about me.

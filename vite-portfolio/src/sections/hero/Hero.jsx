@@ -57,8 +57,8 @@ function Hero() {
                 </div>
             </div>
             {/* <Leva /> */}
-            <div className={`"w-full h-full absolute inset-0 mx-auto" ${(isTallMobile && isMobile) && "-mt-20"}`}>
-                <Canvas className={`"w-full h-full" ${isMonitor && "mt-20"}`} shadows>
+            <div className={`w-full h-full absolute inset-0 mx-auto ${(isTallMobile && isMobile) && "-mt-20"}`}>
+                <Canvas className={`w-full h-full ${isMonitor && "mt-20"}`} shadows>
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault />
                         <ambientLight intensity={1.5} />
