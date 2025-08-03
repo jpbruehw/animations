@@ -32,13 +32,13 @@ function Hero() {
         scale = 0.45
         position = [0.8, -1, 1.5]
     } else if (isLaptop) {
-        scale = 0.6
-        position = [1.2, -0.5, 2.8]
-    } else if (isMonitor) {
         scale = 1
+        position = [1.2, -4, 2.8]
+    } else if (isMonitor) {
+        scale = 1.25
         position = [1.4, -1.5, 2.5]
     } else if (isXLMonitor) {
-        scale = 1
+        scale = 1.15
         position = [1.5, -0.5, 2.3]
     }
 
@@ -58,7 +58,7 @@ function Hero() {
             </div>
             {/* <Leva /> */}
             <div className={`"w-full h-full absolute inset-0 mx-auto" ${(isTallMobile && isMobile) && "-mt-20"}`}>
-                <Canvas className="w-full h-full" shadows>
+                <Canvas className={`"w-full h-full" ${isMonitor && "mt-20"}`} shadows>
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault />
                         <ambientLight intensity={1.5} />

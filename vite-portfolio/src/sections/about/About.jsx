@@ -6,6 +6,7 @@ import ContactButton from '../../components/ContactButton';
 
 import { useMediaQuery } from 'react-responsive';
 import { useIsMobile } from '../../hooks/useIsMobile';
+import { useIsTallMobile } from '../../hooks/useIsTallMobile';
 
 /** TODOS
  *  Add multilingual card
@@ -76,6 +77,7 @@ useEffect(() => {
     }, [shouldRender]);
 
     const isMobile = useIsMobile()
+    const isTallMobile = useIsTallMobile()
 
   // my-20
 
@@ -84,7 +86,12 @@ useEffect(() => {
     const isXLMonitor = useMediaQuery({ minWidth: 1601 })
 
     return (
-        <section className={`"c-space" ${isMobile ? "-mt-60 max-w-[90%] mx-auto" : "-mt-40"}`}>
+        <section className={`"c-space" ${(isMonitor || isLaptop) && "-mt-10"} ${(isMobile && !isTallMobile) && "-mt-60 max-w-[90%] mx-auto"} ${(isMobile && isTallMobile) && "-mt-[400px] max-w-[90%] mx-auto"} ${isXLMonitor && "-mt-80"}`}>
+            <div>
+                <p className={`${isMobile ? "h-[75px]" : "h-12"} head-text mb-2"`}>
+                    First, a bit about me.
+                </p>
+            </div>
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
