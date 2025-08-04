@@ -66,11 +66,11 @@ body {
   }
 
   .grid-headtext {
-    @apply text-xl font-semibold mb-2 text-white font-generalsans;
+    @apply text-2xl font-semibold mb-2 text-white font-generalsans;
   }
 
   .grid-subtext {
-    @apply text-white text-base font-generalsans;
+    @apply text-white text-lg font-generalsans;
   }
 
   .projects-subtext{
@@ -102,31 +102,6 @@ body {
   .highlights-content {
     @apply flex lg:flex-row flex-col justify-between lg:items-center items-start gap-5 mt-7;
   }
-
-  /*  work experience section */
-  /* .work-container {
-    @apply grid lg:grid-cols-3 grid-cols-1 gap-5 mt-12;
-  }
-
-  .work-canvas {
-    @apply col-span-1 rounded-lg bg-black-200 border border-black-300;
-  }
-
-  .work-content {
-    @apply col-span-2 rounded-lg bg-black-200 border border-black-300;
-  }
-
-  .work-content_container {
-    @apply grid grid-cols-[auto_1fr] items-start gap-5  transition-all ease-in-out duration-500 cursor-pointer hover:bg-black-300 rounded-lg sm:px-5 px-2.5;
-  }
-
-  .work-content_logo {
-    @apply rounded-3xl w-16 h-16 p-2 bg-black-600;
-  }
-
-  .work-content_bar {
-    @apply flex-1 w-0.5 mt-4 h-full bg-black-300 group-hover:bg-black-500 group-last:hidden;
-  } */
 
   /* contact section */
   .contact-container {

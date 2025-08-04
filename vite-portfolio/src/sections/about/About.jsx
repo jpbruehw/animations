@@ -113,7 +113,7 @@ useEffect(() => {
                             A person that chooses to use failure as a learning experience rather than as a defeat. 
                         </p>
                     </div>
-            </div>
+                </div>
             <div className="col-span-1 xl:row-span-4">
                     <div className="grid-container">
                         <div ref={ref} className="rounded-3xl w-full sm:h-[326px] sm:mt-20 h-fit flex justify-center items-center">
