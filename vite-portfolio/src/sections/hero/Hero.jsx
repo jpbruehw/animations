@@ -1,7 +1,6 @@
 import { PerspectiveCamera } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
 import HackerRoom from "../../components/HackerRoom.jsx"
-import { OrbitControls} from '@react-three/drei'
 import { Suspense } from "react"
 import CanvasLoader from "../../components/CanvasLoader.jsx"
 import { useMediaQuery } from "react-responsive"
@@ -10,7 +9,6 @@ import { useState, useEffect } from "react"
 import HeroCamera from "./HeroCamera.jsx"
 
 import { useIsTallMobile } from "../../hooks/useIsTallMobile.js"
-// import HeroButton from "../../components/HeroButton.jsx"
 
 function Hero() {
 
@@ -26,7 +24,8 @@ function Hero() {
     // default scale
     let scale = 0.4
     let position = [1.5, 0, 2.5]
-    //let rotation = [1.65, 5, 5]
+    // rotaion should be diff on small screens
+    let nonMobileRotation = [0.265, 0, 0]
 
     if (isMobile) {
         scale = 0.45
@@ -34,6 +33,7 @@ function Hero() {
     } else if (isLaptop) {
         scale = 1
         position = [1.2, -4, 2.8]
+        
     } else if (isMonitor) {
         scale = 1.25
         position = [1.4, -1.5, 2.5]
@@ -63,30 +63,18 @@ function Hero() {
                         <PerspectiveCamera makeDefault />
                         <ambientLight intensity={1.5} />
                         <directionalLight castShadow position={[20, 50, 10]} intensity={3.5} />
-                        
-                        {/* {!isMobile &&
-                            <OrbitControls
-                                enableZoom={true}
-                                minDistance={10}
-                                maxDistance={70}
-                            />} */}
+                    
                         <HeroCamera isMobile={isMobile}>
                             <HackerRoom
                                 scale={scale}
                                 position={position}
-                                rotation={[0.265, 0, 0]}
-                                // rotation={rotation}
+                                rotation={isMobile ? [0.005, 0, 0] : nonMobileRotation}
                                 debug={false}
                             />
                         </HeroCamera>
                     </Suspense>
                 </Canvas>
             </div>
-            {/* <div className="absolute bottom-7 left-0 right-0 w-full z-10">
-                <a className="w-fit">
-                    <HeroButton name="Let's connect" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
-                </a>
-            </div> */}
         </section>
     )
 }

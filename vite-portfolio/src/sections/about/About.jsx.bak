@@ -86,35 +86,44 @@ useEffect(() => {
     const isXLMonitor = useMediaQuery({ minWidth: 1601 })
 
     return (
-        <section className={`
-                        c-space 
-                        ${(isMonitor || isLaptop) && "-mt-10"} 
-                        ${(isMobile && !isTallMobile) && "-mt-60"} 
-                        ${(isMobile && isTallMobile) && "-mt-[400px]"} 
-                        ${isXLMonitor && "-mt-80"}
-                    `}>
+        <section className={`c-space ${(isMonitor || isLaptop) && "-mt-10"} ${(isMobile && !isTallMobile) && "-mt-60 max-w-[90%] mx-auto"} ${(isMobile && isTallMobile) && "-mt-[400px]"} ${isXLMonitor && "-mt-80"}`}>
             <div>
-                <p className={`${isMobile ? "h-[75px] -mb-4" : "h-12"} head-text`}>
+                <p className={`${isMobile ? "h-[75px]" : "h-12"} head-text mb-2"`}>
                     First, a bit about me.
                 </p>
             </div>
-            
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
-                <div className="xl:col-span-2 xl:row-span-3">
+                <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
-                        <img src="/assets/grid-1.png" alt="grid-1" className="w-full sm:h-[266px] h-fit object-contain" />
-                        <p className="grid-headtext">Hey there, nice to meet you.</p>
-                        <p className="grid-subtext">
-                            <b>Who is the person behind this page?</b> Well, let me tell you. A relentless self-starter who only ever gives his very best effort and nothing less. 
-                            A person who understands that a team is a sum of its parts, and that success is never the product of one person alone. 
-                            A person that appreciates the necessity of understanding and fitting into different cultures, having called several different countries and organizations home over the years. 
-                            A person that understands the opportunities, but more importantly the limitations, of emerging technologies. 
-                            A person that understands how technology, strategy, and innovation intertwine to build better business outcomes. 
-                            A person that chooses to use failure as a learning experience rather than as a defeat. 
-                        </p>
+                        <img src="/assets/grid-1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
+                        <div>
+                            <p className="grid-headtext">Hey there, nice to meet you...</p>
+                            <p className="grid-subtext">
+                                Who is the person behind this page? Well, let me tell you. A relentless self-starter who only ever gives his very best effort and nothing less. 
+                                A person who understands that a team is a sum of its parts, and that success is never the product of one person alone. 
+                                A person that appreciates the necessity of understanding and fitting into different cultures, having called several different countries and organizations home over the years. 
+                                A person that understands the opportunities, but more importantly the limitations, of emerging technologies. 
+                                A person that understands how technology, strategy, and innovation intertwine to build better business outcomes. 
+                                A person that chooses to use failure as a learning experience rather than as a defeat. 
+                            </p>
+                        </div>
                     </div>
-            </div>
-            <div className="col-span-1 xl:row-span-4">
+                </div>
+                <div className="col-span-1 xl:row-span-3">
+                    <div className="grid-container">
+                        <img src="/assets/grid-2.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain"/>
+                        <div>
+                            <p className="grid-headtext">Do you ever think to yourself: "Hmm, we can do this better"?</p>
+                            <p className="grid-subtext">
+                                Me too, and by asking that very question, I have become an expert at making businesses money through empowering them to be efficient, lean, and innovative. 
+                                Many organization today find themselves at the crossroads of <strong>technology, data, and innovation. </strong> 
+                                I deliver results by harnessing my expertise in all three to craft strategies that address even the most complex business cases.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-span-1 xl:row-span-4">
                     <div className="grid-container">
                         <div ref={ref} className="rounded-3xl w-full sm:h-[326px] sm:mt-20 h-fit flex justify-center items-center">
                             {shouldRender && (
@@ -147,33 +156,16 @@ useEffect(() => {
                         </div>
                     </div>
                 </div>
-                <div className="col-span-1 xl:row-span-3">
+                <div className="xl:col-span-2 xl:row-span-3">
                     <div className="grid-container">
-                        <img src="/assets/grid-1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
-                        <div>
-                            <p className="grid-headtext">Hey there, nice to meet you...</p>
-                            <p className="grid-subtext">
-                                
-                            </p>
-                        </div>
+                        <img src="/assets/grid-3.svg" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain"
+                        />
+                        <p className="grid-headtext">Multilingual: On and Off the Keyboard.</p>
+                        <p className="grid-subtext">
+                            Expert in programming languages like python etc. then talk about the languages you know.
+                        </p>
                     </div>
                 </div>
-                <div className="col-span-1 xl:row-span-3">
-                    <div className="grid-container">
-                        <img src="/assets/grid-2.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain"/>
-                        <div>
-                            <p className="grid-headtext">Do you ever think to yourself: "Hmm, we can do this better"?</p>
-                            <p className="grid-subtext">
-                                Me too, and by asking that very question, I have become an expert at making businesses money through empowering them to be efficient, lean, and innovative. 
-                                Many organization today find themselves at the crossroads of <strong>technology, data, and innovation. </strong> 
-                                I deliver results by harnessing my expertise in all three to craft strategies that address even the most complex business cases.
-
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                
                 <div className="xl:col-span-1 xl:row-span-2">
                     <div className="grid-container">
                         <img src="/assets/grid-4-new.svg" alt="grid-4" className="w-full md:h-[170px] sm:h-[276px] h-fit object-cover sm:object-top"/>

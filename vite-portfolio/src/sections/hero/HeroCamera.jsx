@@ -4,15 +4,26 @@ import { easing } from "maath"
 
 const HeroCamera = ({ children, isMobile }) => {
     const groupRef = useRef()
-
     const angleRef = useRef(0)
+
+    const rotationSpeedRef = useRef(5)
+    const minSpeed = 1
+    const decayRate = 1
 
     useFrame((state, delta) => {
         if (isMobile) {
-            // spin the camera around the Y axis
-            angleRef.current += delta * 0.5
+            // gradually reduce speed until it hits minSpeed
+            if (rotationSpeedRef.current > minSpeed) {
+                rotationSpeedRef.current -= decayRate * delta
+                if (rotationSpeedRef.current < minSpeed) {
+                    rotationSpeedRef.current = minSpeed
+                }
+            }
 
-            const radius = 20 // same as Z in the non-mobile setup
+            // update angle with current speed
+            angleRef.current += delta * rotationSpeedRef.current
+
+            const radius = 20
             const x = Math.sin(angleRef.current) * radius
             const z = Math.cos(angleRef.current) * radius
 
