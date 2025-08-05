@@ -79,7 +79,7 @@ useEffect(() => {
     const isMobile = useIsMobile()
     const isTallMobile = useIsTallMobile()
 
-  // my-20
+  // my-20 sm:h-[266px]
 
     const isLaptop = useMediaQuery({ minWidth: 769, maxWidth: 1280 })
     const isMonitor = useMediaQuery({ minWidth: 1281, maxWidth: 1600 })
@@ -102,7 +102,7 @@ useEffect(() => {
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="xl:col-span-2 xl:row-span-3">
                     <div className="grid-container">
-                        <img src="/assets/grid-1.png" alt="grid-1" className="w-full sm:h-[266px] h-fit object-contain" />
+                        <img src="/assets/grid-1.png" alt="grid-1" className="w-full sm:h-[350px] h-fit object-contain" />
                         <p className="grid-headtext">Hey there, nice to meet you.</p>
                         <p className="grid-subtext">
                             <b>Who is the person behind this page?</b> Well, let me tell you. A relentless self-starter who only ever gives his very best effort and nothing less. 
