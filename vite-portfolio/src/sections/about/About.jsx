@@ -149,11 +149,17 @@ useEffect(() => {
                 </div>
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
-                        <img src="/assets/grid-1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
+                        <img src="/assets/grid-4-new.svg" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
                         <div>
-                            <p className="grid-headtext">Hey there, nice to meet you...</p>
+                            <p className="grid-headtext">Analytic Expertise that Powers Profitable Decision Making.</p>
                             <p className="grid-subtext">
-                                
+                                A firm's data is its most valuable asset...or at least it can be. 
+                                Most firms understand the potential value of their data, but struggle with execution.
+                            </p>
+                            <br />
+                            <p className="grid-subtext">
+                                Whether automation, AI, or hardcore statistics, I have the technical ability and business acumen 
+                                to build and execute data strategies that make companies money.
                             </p>
                         </div>
                     </div>
@@ -167,13 +173,10 @@ useEffect(() => {
                                 Me too, and by asking that very question, I have become an expert at making businesses money through empowering them to be efficient, lean, and innovative. 
                                 Many organization today find themselves at the crossroads of <strong>technology, data, and innovation. </strong> 
                                 I deliver results by harnessing my expertise in all three to craft strategies that address even the most complex business cases.
-
                             </p>
                         </div>
                     </div>
                 </div>
-                
-                
                 <div className="xl:col-span-1 xl:row-span-2">
                     <div className="grid-container">
                         <img src="/assets/grid-4-new.svg" alt="grid-4" className="w-full md:h-[170px] sm:h-[276px] h-fit object-cover sm:object-top"/>
