@@ -81,9 +81,11 @@ useEffect(() => {
 
   // my-20 sm:h-[266px]
 
-    const isLaptop = useMediaQuery({ minWidth: 769, maxWidth: 1280 })
-    const isMonitor = useMediaQuery({ minWidth: 1281, maxWidth: 1600 })
-    const isXLMonitor = useMediaQuery({ minWidth: 1601 })
+const isLaptop = useMediaQuery({ minWidth: 769, maxWidth: 1280 })
+const isMonitor = useMediaQuery({ minWidth: 1281, maxWidth: 2560 })
+const isXLMonitor = useMediaQuery({ minWidth: 2561 })
+//const isXXLMonitor = useMediaQuery({ minWidth: 3841 }) // 4K and above
+
 
     return (
         <section id="about"
@@ -91,12 +93,16 @@ useEffect(() => {
                         c-space 
                         ${(isMonitor || isLaptop) && "-mt-10"} 
                         ${(isMobile && !isTallMobile) && "-mt-60"} 
-                        ${(isMobile && isTallMobile) && "-mt-[400px]"} 
+                        ${(isMobile && isTallMobile) && "-mt-[400px]"}
+                        ${isMonitor && "-mt-60"}
                         ${isXLMonitor && "-mt-80"}
                     `}>
             <div>
                 <p className={`${isMobile ? "h-[75px] -mb-4" : "h-12"} head-text`}>
                     First, a bit about me.
+                </p>
+                <p className="projects-subtext">
+                    al;sdkfjha;soidfkhjsapoFUIHASPIOSFDGUHASDPIODUG
                 </p>
             </div>
             
@@ -186,7 +192,7 @@ useEffect(() => {
                 </div>
                 <div className="xl:col-span-1 xl:row-span-2">
                     <div className="grid-container">
-                        <img src="/assets/grid-5.png" alt="grid-5" className="w-full md:mx-auto sm:h-[240px] h-fit object-cover sm:object-top"/>
+                        <img src="/assets/grid-5.png" alt="grid-5" className="w-full md:mx-auto sm:h-[240px] xl:object-contain h-fit object-cover sm:object-top"/>
                         <p className="grid-headtext">It's never a fair fight when I am on your side.</p>
                         <p className="grid-subtext">
                             Like if your business had pocket aces...and your competition has 7-2 off-suit!

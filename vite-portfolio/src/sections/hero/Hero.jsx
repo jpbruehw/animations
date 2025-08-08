@@ -53,17 +53,15 @@ function Hero() {
         <section className="min-h-screen w-full flex flex-col relative transform-gpu"> 
             <div className="w-full mx-auto flex flex-col sm:mt-30 mt-20 c-space gap-3">
                 <div className="hero-heading-wrapper z-20">
-                    <h1 className={`hero-heading ${active ? "active": ""} ${isMobile && "ml-2"}`} data-heading="I Create Value w/ Data & Technology">I Create Value w/ Data & Technology</h1>
+                    <h1 className={`hero-heading ${active && "active"} ${isMobile && "ml-2"}`} data-heading="I Create Value w/ Data & Technology">I Create Value w/ Data & Technology</h1>
                 </div>
             </div>
-            {/* <Leva /> */}
-            <div className={`w-full h-full absolute inset-0 mx-auto ${(isTallMobile && isMobile) && "-mt-20"}`}>
-                <Canvas className={`w-full h-full ${isMonitor && "mt-20"}`} shadows>
+            <div className={`w-full h-full absolute inset-0 ${isXLMonitor && "mt-12"} mx-auto ${(isTallMobile && isMobile) && "-mt-20"}`}>
+                <Canvas className="w-full h-full" shadows>
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault />
                         <ambientLight intensity={1.5} />
                         <directionalLight castShadow position={[20, 50, 10]} intensity={3.5} />
-                    
                         <HeroCamera isMobile={isMobile}>
                             <HackerRoom
                                 scale={scale}
