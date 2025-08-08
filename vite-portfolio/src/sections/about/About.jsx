@@ -173,7 +173,10 @@ useEffect(() => {
                         <div>
                             <p className="grid-headtext">Do you ever think to yourself: "Hmm, we can do this better"?</p>
                             <p className="grid-subtext">
-                                Me too, and by asking that very question, I have become an expert at making businesses money through empowering them to be efficient, lean, and innovative. 
+                                Me too, and by asking that very question, I have become an expert at making businesses money through empowering them to be efficient, lean, and innovative.
+                            </p>
+                            <br />
+                            <p className="grid-subtext">
                                 Many organization today find themselves at the crossroads of <strong>technology, data, and innovation. </strong> 
                                 I deliver results by harnessing my expertise in all three to craft strategies that address even the most complex business cases.
                             </p>
@@ -182,7 +185,7 @@ useEffect(() => {
                 </div>
                 <div className="xl:col-span-1 xl:row-span-2">
                     <div className="grid-container">
-                        <img src="/assets/grid-4.svg" alt="grid-4" className="w-full md:mx-auto md:w-[70%] sm:h-[276px] h-fit object-cover sm:object-top"/>
+                        <img src="/assets/grid-4.png" alt="grid-4" className="w-full md:mx-auto sm:h-[240px] h-fit object-cover sm:object-top"/>
                         <p className="grid-headtext">With me, you've always got pocket aces.</p>
                     </div>
                 </div>
