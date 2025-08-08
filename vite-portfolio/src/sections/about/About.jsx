@@ -139,7 +139,10 @@ useEffect(() => {
                         <div>
                             <p className="grid-headtext"> I Have Global Perspectives That Drive Competitive Advantage.</p>
                             <p className="grid-subtext">
-                                Throughout my life, I have lived, worked, and/or studied in four continents. I've learned that <b>problems are often universal, but solutions are context specific. </b>
+                                Throughout my life, I have lived, worked, and/or studied in four continents. I've learned that <b>problems are often universal, but solutions are context specific.</b>
+                            </p>
+                            <br />
+                            <p className="grid-subtext">
                                 To lead effectively and better anticipate your competition, understanding of the cultural, economic, and political context is key. My continent crossing experience means I can effectively 
                                 adapt to, connect with, and operate successfully with people from any background.
                             </p>
@@ -158,7 +161,7 @@ useEffect(() => {
                             </p>
                             <br />
                             <p className="grid-subtext">
-                                Whether automation, AI, or hardcore statistics, I have the technical ability and business acumen 
+                                Whether robotic process automation, AI, or hardcore statistics, I have the technical ability and business acumen 
                                 to build and execute data strategies that make companies money.
                             </p>
                         </div>
@@ -179,7 +182,7 @@ useEffect(() => {
                 </div>
                 <div className="xl:col-span-1 xl:row-span-2">
                     <div className="grid-container">
-                        <img src="/assets/grid-4-new.svg" alt="grid-4" className="w-full md:h-[170px] sm:h-[276px] h-fit object-cover sm:object-top"/>
+                        <img src="/assets/grid-4.svg" alt="grid-4" className="w-full md:mx-auto md:w-[70%] sm:h-[276px] h-fit object-cover sm:object-top"/>
                         <p className="grid-headtext">Analytic Expertise that Powers Profitable Decision Making.</p>
                         <p className="grid-subtext">
                             Write here about analytic expertise and how it leads to better outcomes etc.
