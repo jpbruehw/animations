@@ -62,11 +62,15 @@ body {
 
   /* about section */
   .grid-container {
-    @apply w-full h-full border border-black-300 bg-[#7F8CAA] rounded-lg sm:p-7 p-4 flex flex-col gap-5;
+    @apply w-full h-full border border-black-300 bg-[#7F8CAA] rounded-lg sm:p-7 p-4 flex flex-col gap-5 md:gap-2;
   }
 
   .grid-headtext {
     @apply text-2xl font-semibold mb-2 text-white font-generalsans;
+  }
+
+  .grid-headtext-main {
+    @apply text-2xl font-semibold text-white font-generalsans;
   }
 
   .grid-subtext {

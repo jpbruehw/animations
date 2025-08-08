@@ -86,7 +86,8 @@ useEffect(() => {
     const isXLMonitor = useMediaQuery({ minWidth: 1601 })
 
     return (
-        <section className={`
+        <section id="about"
+                    className={`
                         c-space 
                         ${(isMonitor || isLaptop) && "-mt-10"} 
                         ${(isMobile && !isTallMobile) && "-mt-60"} 
@@ -103,11 +104,11 @@ useEffect(() => {
                 <div className="xl:col-span-2 xl:row-span-3">
                     <div className="grid-container">
                         <img src="/assets/grid-1.png" alt="grid-1" className="w-full sm:h-[350px] h-fit object-contain" />
-                        <p className="grid-headtext">Hey there, nice to meet you.</p>
+                        <p className={isMobile ? "grid-headtext" : "grid-headtext-main"}>Hey there, nice to meet you.</p>
                         <p className="grid-subtext">
                             <b>Who is the person behind this page?</b> Well, let me tell you. A relentless self-starter who only ever gives his very best effort and nothing less. 
                             A person who understands that a team is a sum of its parts, and that success is never the product of one person alone. 
-                            A person that appreciates the necessity of understanding and fitting into different cultures, having called several different countries and organizations home over the years. 
+                            A person that appreciates the necessity of understanding and fitting into different cultures, having called several different countries and organizations home over the years.
                             A person that understands the opportunities, but more importantly the limitations, of emerging technologies. 
                             A person that understands how technology, strategy, and innovation intertwine to build better business outcomes. 
                             A person that chooses to use failure as a learning experience rather than as a defeat. 
@@ -152,7 +153,7 @@ useEffect(() => {
                 </div>
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
-                        <img src="/assets/grid-4-new.svg" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
+                        <img src="/assets/grid-3.svg" alt="grid-3" className="w-full sm:h-[276px] h-fit object-contain" />
                         <div>
                             <p className="grid-headtext">Analytic Expertise that Powers Profitable Decision Making.</p>
                             <p className="grid-subtext">
@@ -161,7 +162,7 @@ useEffect(() => {
                             </p>
                             <br />
                             <p className="grid-subtext">
-                                Whether robotic process automation, AI, or hardcore statistics, I have the technical ability and business acumen 
+                                Whether robotic process automation, AI, or hardcore statistics, I have the technical ability and subject matter expertise  
                                 to build and execute data strategies that make companies money.
                             </p>
                         </div>
@@ -169,11 +170,11 @@ useEffect(() => {
                 </div>
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
-                        <img src="/assets/grid-2.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain"/>
+                        <img src="/assets/grid-4.png" alt="grid-4" className="w-full sm:h-[276px] h-fit object-contain"/>
                         <div>
                             <p className="grid-headtext">Do you ever think to yourself: "Hmm, we can do this better"?</p>
                             <p className="grid-subtext">
-                                Me too, and by asking that very question, I have become an expert at making businesses money through empowering them to be efficient, lean, and innovative.
+                                Me too, and by asking that very question, I have become an expert at making businesses money through empowering them to be lean, efficient, and innovative.
                             </p>
                             <br />
                             <p className="grid-subtext">
@@ -185,8 +186,11 @@ useEffect(() => {
                 </div>
                 <div className="xl:col-span-1 xl:row-span-2">
                     <div className="grid-container">
-                        <img src="/assets/grid-4.png" alt="grid-4" className="w-full md:mx-auto sm:h-[240px] h-fit object-cover sm:object-top"/>
-                        <p className="grid-headtext">With me, you've always got pocket aces.</p>
+                        <img src="/assets/grid-5.png" alt="grid-5" className="w-full md:mx-auto sm:h-[240px] h-fit object-cover sm:object-top"/>
+                        <p className="grid-headtext">It's never a fair fight when I am on your side.</p>
+                        <p className="grid-subtext">
+                            Like if your business had pocket aces...and your competition has 7-2 off-suit!
+                        </p>
                     </div>
                 </div>
             </div>
