@@ -114,7 +114,7 @@ useEffect(() => {
                         </p>
                     </div>
                 </div>
-            <div className="col-span-1 xl:row-span-4">
+                <div className="col-span-1 xl:row-span-4">
                     <div className="grid-container">
                         <div ref={ref} className="rounded-3xl w-full sm:h-[326px] sm:mt-20 h-fit flex justify-center items-center">
                             {shouldRender && (
@@ -183,10 +183,7 @@ useEffect(() => {
                 <div className="xl:col-span-1 xl:row-span-2">
                     <div className="grid-container">
                         <img src="/assets/grid-4.svg" alt="grid-4" className="w-full md:mx-auto md:w-[70%] sm:h-[276px] h-fit object-cover sm:object-top"/>
-                        <p className="grid-headtext">Analytic Expertise that Powers Profitable Decision Making.</p>
-                        <p className="grid-subtext">
-                            Write here about analytic expertise and how it leads to better outcomes etc.
-                        </p>
+                        <p className="grid-headtext">With me, you've always got pocket aces.</p>
                     </div>
                 </div>
             </div>
