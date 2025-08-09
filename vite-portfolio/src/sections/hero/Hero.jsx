@@ -14,8 +14,8 @@ function Hero() {
 
     const isMobile = useMediaQuery({ maxWidth: 768 })
     const isLaptop = useMediaQuery({ minWidth: 769, maxWidth: 1280 })
-    const isMonitor = useMediaQuery({ minWidth: 1281, maxWidth: 1600 })
-    const isXLMonitor = useMediaQuery({ minWidth: 1601 })
+    const isMonitor = useMediaQuery({ minWidth: 1281, maxWidth: 2200 })
+    const isXLMonitor = useMediaQuery({ minWidth: 2201 })
 
     const [active, setActive] = useState(true)
 
@@ -35,7 +35,7 @@ function Hero() {
         position = [1.2, -4, 2.8]
         
     } else if (isMonitor) {
-        scale = 1.25
+        scale = 1.2
         position = [1.4, -1.5, 2.5]
     } else if (isXLMonitor) {
         scale = 1.15
@@ -56,7 +56,7 @@ function Hero() {
                     <h1 className={`hero-heading ${active && "active"} ${isMobile && "ml-2"}`} data-heading="I Create Value w/ Data & Technology">I Create Value w/ Data & Technology</h1>
                 </div>
             </div>
-            <div className={`w-full h-full absolute inset-0 ${isXLMonitor && "mt-12"} mx-auto ${(isTallMobile && isMobile) && "-mt-20"}`}>
+            <div className={`w-full h-full absolute inset-0 ${isMonitor && "mt-[25px]"} ${isXLMonitor && "mt-12"} mx-auto ${(isTallMobile && isMobile) && "-mt-20"}`}>
                 <Canvas className="w-full h-full" shadows>
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault />

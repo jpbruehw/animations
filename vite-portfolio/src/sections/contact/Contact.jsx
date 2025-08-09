@@ -1,6 +1,5 @@
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import { useIsMobile } from '../../hooks/useIsMobile.js';
 import useAlert from '../../hooks/useAlert.js';
 import Alert from '../../components/Alert.jsx';
@@ -15,9 +14,6 @@ const Contact = () => {
     const formRef = useRef();
 
     const isMobile = useIsMobile()
-    const isLaptop = useMediaQuery({ minWidth: 769, maxWidth: 1280 })
-    const isMonitor = useMediaQuery({ minWidth: 1281, maxWidth: 1600 })
-    const isXLMonitor = useMediaQuery({ minWidth: 2051 })
 
     const { alert, showAlert, hideAlert } = useAlert();
     const [loading, setLoading] = useState(false);
@@ -74,11 +70,10 @@ const Contact = () => {
     }   
 
     return (
-        <section className={`c-space mb-10 ${isMobile ? "bg-black-200 mt-4 w-[90%] mx-auto rounded-lg" : "mt-10"}`} id="contact">
+        <section className={`c-space mb-10 bg-black-200 rounded-lg w-[90%] md:w-[95%] mx-auto ${isMobile ? "mt-4" : "mt-10"}`} id="contact">
             {alert.show && <Alert {...alert} />}
 
             <div className="relative min-h-screen flex items-center justify-center flex-col">
-                {/* { !isMobile && <img src={`/assets/${isXLMonitor ? "terminal-xl.png" : isLaptop ? "terminal-md.png" : ""}`} alt="terminal" className="absolute inset-0 h-full w-full rounded-lg" /> } */}
 
                 <div className={`c-space z-10 mb-8 ${isMobile ? "mt-8" : "mt-20"}`}>
                     <h3 className="head-text">Let's talk</h3>

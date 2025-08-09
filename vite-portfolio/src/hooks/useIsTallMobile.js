@@ -11,7 +11,7 @@ export function useIsTallMobile() {
         const check = () => {
             const isNowTall = window.innerHeight >= 700;
             setIsTallMobile(isNowTall);
-        };    
+        };
         // check screen size on mount
         // add as even listener for subsequent width changes
         check();

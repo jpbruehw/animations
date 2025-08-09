@@ -81,28 +81,26 @@ useEffect(() => {
 
   // my-20 sm:h-[266px]
 
-const isLaptop = useMediaQuery({ minWidth: 769, maxWidth: 1280 })
-const isMonitor = useMediaQuery({ minWidth: 1281, maxWidth: 2560 })
-const isXLMonitor = useMediaQuery({ minWidth: 2561 })
-//const isXXLMonitor = useMediaQuery({ minWidth: 3841 }) // 4K and above
-
+    const isLaptop = useMediaQuery({ minWidth: 769, maxWidth: 1280 })
+    const isMonitor = useMediaQuery({ minWidth: 1281, maxWidth: 2200 })
+    const isXLMonitor = useMediaQuery({ minWidth: 2201 })
 
     return (
         <section id="about"
                     className={`
                         c-space 
-                        ${(isMonitor || isLaptop) && "-mt-10"} 
+                        ${(isMonitor || isLaptop) && "-mt-[150px]"} 
                         ${(isMobile && !isTallMobile) && "-mt-60"} 
                         ${(isMobile && isTallMobile) && "-mt-[400px]"}
-                        ${isMonitor && "-mt-60"}
-                        ${isXLMonitor && "-mt-80"}
+                        ${isMonitor && "-mt-[200px]"}
+                        ${isXLMonitor && "-mt-[450px]"}
                     `}>
-            <div>
+            <div className="w-full mb-4">
                 <p className={`${isMobile ? "h-[75px] -mb-4" : "h-12"} head-text`}>
                     First, a bit about me.
                 </p>
                 <p className="projects-subtext">
-                    al;sdkfjha;soidfkhjsapoFUIHASPIOSFDGUHASDPIODUG
+                    
                 </p>
             </div>
             
@@ -115,6 +113,9 @@ const isXLMonitor = useMediaQuery({ minWidth: 2561 })
                             <b>Who is the person behind this page?</b> Well, let me tell you. A relentless self-starter who only ever gives his very best effort and nothing less. 
                             A person who understands that a team is a sum of its parts, and that success is never the product of one person alone. 
                             A person that appreciates the necessity of understanding and fitting into different cultures, having called several different countries and organizations home over the years.
+                        </p>
+                        <div></div>
+                        <p className="grid-subtext">
                             A person that understands the opportunities, but more importantly the limitations, of emerging technologies. 
                             A person that understands how technology, strategy, and innovation intertwine to build better business outcomes. 
                             A person that chooses to use failure as a learning experience rather than as a defeat. 
@@ -193,7 +194,7 @@ const isXLMonitor = useMediaQuery({ minWidth: 2561 })
                 <div className="xl:col-span-1 xl:row-span-2">
                     <div className="grid-container">
                         <img src="/assets/grid-5.png" alt="grid-5" className="w-full md:mx-auto sm:h-[240px] xl:object-contain h-fit object-cover sm:object-top"/>
-                        <p className="grid-headtext">It's never a fair fight when I am on your side.</p>
+                        <p className="grid-headtext">It's never a fair fight when I'm on your side.</p>
                         <p className="grid-subtext">
                             Like if your business had pocket aces...and your competition has 7-2 off-suit!
                         </p>

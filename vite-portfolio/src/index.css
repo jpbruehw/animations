@@ -74,7 +74,7 @@ body {
   }
 
   .grid-subtext {
-    @apply text-white text-lg font-generalsans;
+    @apply text-white text-xl sm:text-lg font-generalsans;
   }
 
   .projects-subtext{
