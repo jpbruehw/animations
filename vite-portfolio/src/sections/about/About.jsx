@@ -92,18 +92,19 @@ useEffect(() => {
                         ${(isMonitor || isLaptop) && "-mt-[150px]"} 
                         ${(isMobile && !isTallMobile) && "-mt-60"} 
                         ${(isMobile && isTallMobile) && "-mt-[400px]"}
-                        ${isMonitor && "-mt-[200px]"}
+                        ${isMonitor && "-mt-[100px]"}
                         ${isXLMonitor && "-mt-[450px]"}
                     `}>
+
             <div className="w-full mb-4">
                 <p className={`${isMobile ? "h-[75px] -mb-4" : "h-12"} head-text`}>
                     First, a bit about me.
                 </p>
                 <p className="projects-subtext">
-                    
+                    In Texas Hold 
                 </p>
             </div>
-            
+
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="xl:col-span-2 xl:row-span-3">
                     <div className="grid-container">
