@@ -88,11 +88,11 @@ useEffect(() => {
     return (
         <section id="about"
                     className={`
-                        c-space 
+                        c-space
                         ${(isMonitor || isLaptop) && "-mt-[150px]"} 
                         ${(isMobile && !isTallMobile) && "-mt-60"} 
                         ${(isMobile && isTallMobile) && "-mt-[400px]"}
-                        ${isMonitor && "-mt-[100px]"}
+                        ${isMonitor && "-mt-[80px]"}
                         ${isXLMonitor && "-mt-[450px]"}
                     `}>
 

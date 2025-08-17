@@ -30,8 +30,9 @@ const HeroCamera = ({ children, isMobile }) => {
             easing.damp3(state.camera.position, [x, 0, z], 0.25, delta)
             state.camera.lookAt(0, 0, 0)
         } else {
+            // add it so the pull is limited to a certain degree
             easing.damp3(state.camera.position, [0, 0, 20], 0.25, delta)
-            easing.dampE(groupRef.current.rotation, [-state.pointer.y / 5, state.pointer.x / 2, 0], 0.25, delta)
+            easing.dampE(groupRef.current.rotation, [-state.pointer.y / 10, state.pointer.x / 1.75, 0], 0.25, delta)
         }
     })
 
