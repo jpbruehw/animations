@@ -17,7 +17,7 @@ function Links() {
             <p className="head-text md:mb-4 mb-2">
                 Links
             </p>
-            <div className="flex items-center md:justify-center flex-wrap gap-5 md:gap-8">
+            <div className="flex items-center justify-center flex-wrap gap-5 md:gap-8">
                 <div className="flex flex-col justify-center items-center">
                     <a
                     href="https://github.com/jpbruehw"

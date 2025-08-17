@@ -82,7 +82,7 @@ body {
   }
 
   .copy-container {
-    @apply cursor-pointer flex justify-center items-center gap-2;
+    @apply cursor-pointer flex justify-center items-center gap-2 w-full;
   }
 
   /* projects section  */
