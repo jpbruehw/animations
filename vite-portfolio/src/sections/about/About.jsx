@@ -101,7 +101,9 @@ useEffect(() => {
                     First, a bit about me.
                 </p>
                 <p className="projects-subtext">
-                    In Texas Hold 
+                    In Texas Hold'Em, the strongest hand against pocket aces is 5-6 suited. Why? 
+                    Because 5-6 suited can maneuver in a way that most can't and knows how to win in situations where most lose. 
+                    You can think of me as 5-6 suited with pair of pocket aces up his sleeve at all times.
                 </p>
             </div>
 

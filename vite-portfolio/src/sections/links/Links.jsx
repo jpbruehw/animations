@@ -13,16 +13,16 @@ function Links() {
     };
 
     return (
-        <section id="links">
-            <div className="flex items-center gap-5">
+        <section id="links" className="c-space">
+            <p className="head-text md:mb-4 mb-2">
+                Links
+            </p>
                 <div className="flex items-center gap-5">
-                    
-                </div>
-                <div className="flex items-center gap-5">
-                    <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">
-                        Let's Connect:
-                    </p>
-                    <a
+                    {/* <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">
+                        Connect:
+                    </p> */}
+                    <div className="flex flex-col justify-center items-center">
+                        <a
                         href="https://github.com/jpbruehw"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -30,7 +30,10 @@ function Links() {
                     >
                         <img src="/assets/github.png" alt="github" className="h-full rounded-full transition-transform duration-200 ease-in-out hover:scale-110" />
                     </a>
-
+                    <p className="md:text-xl font-medium text-gray_gradient text-white">
+                        GitHub 
+                    </p>
+                    </div>
                     <a
                         href="https://www.linkedin.com/in/jpbruehwiler/"
                         target="_blank"
@@ -43,11 +46,10 @@ function Links() {
                     <div className="copy-container" onClick={handleCopy}>
                         <img src={hasCopied ? '/assets/tick.svg' : '/assets/copy.svg'} alt="copy" />
                         <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">
-                            jpbruehwiler@icloud.com
+                            jpkbruehwiler@gmail.com
                         </p>
                     </div>
                 </div>
-            </div>
         </section>
     )
 }
