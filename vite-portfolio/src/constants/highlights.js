@@ -44,7 +44,7 @@ export const highlights = [
             },
             {
                 id: 2,
-                text: 'Read Thesis',
+                text: 'Read Paper',
                 href: 'https://drive.google.com/file/d/1xIuXDUn-J9_CYk0OdG4s8mzdy6GQNIZm/view'
             },
             {

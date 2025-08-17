@@ -13,4 +13,3 @@ export default function HackerRoom({ scale, position, rotation, debug = true }) 
         </group>
     )
 }
-

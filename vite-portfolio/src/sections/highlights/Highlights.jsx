@@ -24,7 +24,6 @@ function Highlights() {
                     <div key={`review-${item.id}`} className="highlight">
                         <div>
                             <p className="text-white-800 font-light">{item.desc}</p>
-
                             <div className="highlights-content">
                                 <div className="flex gap-3">
                                     <img src={item.img} alt="highlight" className="w-14 h-14 rounded-full" />
