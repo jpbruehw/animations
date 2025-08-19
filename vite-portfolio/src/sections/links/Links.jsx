@@ -12,9 +12,11 @@ function Links() {
         }, 2000);
     };
 
+    // change the alt tags here
+
     return (
         <section id="links" className="c-space">
-            <p className="head-text md:mb-4 mb-2">
+            <p className="head-text md:mb-6 mb-4 text-center">
                 Links
             </p>
             <div className="flex items-center justify-center flex-wrap gap-5 md:gap-8">

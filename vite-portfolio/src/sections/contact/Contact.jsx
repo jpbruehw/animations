@@ -73,9 +73,9 @@ const Contact = () => {
         <section className={`c-space mb-10 bg-black-200 rounded-lg w-[90%] md:w-[95%] mx-auto ${isMobile ? "mt-4" : "mt-10"}`} id="contact">
             {alert.show && <Alert {...alert} />}
 
-            <div className="relative min-h-screen flex items-center justify-center flex-col">
+            <div className="relative h-[90vh] flex items-center justify-center flex-col">
 
-                <div className={`c-space z-10 mb-8 ${isMobile ? "mt-8" : "mt-20"}`}>
+                <div className={`c-space z-10 ${isMobile ? "pt-0 pb-0" : "pt-24 pb-24"}`}>
                     <h3 className="head-text">Let's talk</h3>
                     <p className="text-lg text-white-600 mt-3">
                         Whether you’re looking to build a new website, improve your existing platform, or bring a unique project to
