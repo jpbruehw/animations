@@ -31,7 +31,7 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto">
                 <div className="flex justify-center items-center p-5 mx-auto c-space">
                     <NavbarHeader />
-                <Dropdown isOpen={isDropdownOpen} setIsOpen={setIsDropdownOpen} />
+                    <Dropdown isOpen={isDropdownOpen} setIsOpen={setIsDropdownOpen} />
                 </div>
             </div>
         </header>

@@ -40,7 +40,7 @@ function Projects() {
     const isMobile = useIsMobile()
     
     return (
-        <section className="c-space my-20">
+        <section id="projects" className="c-space my-20">
             <div>
                 <p className={`${isMobile ? "h-[75px] mb-4" : "h-12"} head-text`}>
                     Some of my favorite projects

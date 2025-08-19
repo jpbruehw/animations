@@ -2,7 +2,7 @@ const navLinks = [
     {
         id: 1,
         name: 'Home',
-        href: '#home',
+        href: '#root',
     },
     {
         id: 2,
@@ -11,11 +11,21 @@ const navLinks = [
     },
     {
         id: 3,
-        name: 'Work',
-        href: '#work',
+        name: 'Projects',
+        href: '#projects',
     },
     {
         id: 4,
+        name: '21',
+        href: "#blackjack"
+    },
+    {
+        id: 5,
+        name: "Highlights",
+        href: "#highlights"
+    },
+    {
+        id: 6,
         name: 'Contact',
         href: '#contact',
     },
