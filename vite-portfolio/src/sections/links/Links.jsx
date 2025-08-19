@@ -12,8 +12,6 @@ function Links() {
         }, 2000);
     };
 
-    // change the alt tags here
-
     return (
         <section id="links" className="c-space">
             <p className="head-text md:mb-6 mb-4 text-center">
@@ -27,7 +25,7 @@ function Links() {
                     rel="noopener noreferrer"
                     className="social-icon"
                     >
-                        <img src="/assets/github.png" alt="github" className="h-full rounded-full transition-transform duration-200 ease-in-out hover:scale-110" />
+                        <img src="/assets/github.svg" alt="github" className="h-full rounded-full transition-transform duration-200 ease-in-out hover:scale-110" />
                     </a>
                     <p className="md:text-xl font-medium text-gray_gradient text-white">
                         GitHub 
@@ -53,7 +51,7 @@ function Links() {
                         rel="noopener noreferrer"
                         className="social-icon"
                     >
-                        <img src="/assets/cv.svg" alt="linkedin" className="h-full rounded-full transition-transform duration-200 ease-in-out hover:scale-110" />
+                        <img src="/assets/cv.svg" alt="resume" className="h-full rounded-full transition-transform duration-200 ease-in-out hover:scale-110" />
                     </a>
                     <p className="md:text-xl font-medium text-gray_gradient text-white">
                         Resume
@@ -66,7 +64,7 @@ function Links() {
                         rel="noopener noreferrer"
                         className="social-icon"
                     >
-                        <img src="/assets/thesis.svg" alt="linkedin" className="h-full rounded-full transition-transform duration-200 ease-in-out hover:scale-110" />
+                        <img src="/assets/thesis.svg" alt="master's thesis" className="h-full rounded-full transition-transform duration-200 ease-in-out hover:scale-110" />
                     </a>
                     <p className="md:text-xl font-medium text-gray_gradient text-white">
                         Msc. Thesis

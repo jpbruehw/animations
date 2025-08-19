@@ -128,9 +128,9 @@ body {
     @apply w-2.5 h-2.5 object-contain invert brightness-0;
   }
 
-  /*  footer */
+  /*  links */
   .social-icon {
-    @apply h-10 w-10 sm:h-12 sm:w-12  rounded-full flex justify-center items-center border border-black-200;
+    @apply h-10 w-10 sm:h-12 sm:w-12  rounded-full flex justify-center items-center;
   }
 }
 

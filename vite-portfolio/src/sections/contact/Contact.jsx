@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import { useIsMobile } from '../../hooks/useIsMobile.js';
 import useAlert from '../../hooks/useAlert.js';
 import Alert from '../../components/Alert.jsx';
+import { useMediaQuery } from 'react-responsive';
 
 //** TODOS
 // add a new bg image for mobile screens
@@ -14,6 +15,7 @@ const Contact = () => {
     const formRef = useRef();
 
     const isMobile = useIsMobile()
+    const isXLMonitor = useMediaQuery({ minWidth: 2201 })
 
     const { alert, showAlert, hideAlert } = useAlert();
     const [loading, setLoading] = useState(false);
@@ -73,7 +75,7 @@ const Contact = () => {
         <section className={`c-space mb-10 bg-black-200 rounded-lg w-[90%] md:w-[95%] mx-auto ${isMobile ? "mt-4" : "mt-10"}`} id="contact">
             {alert.show && <Alert {...alert} />}
 
-            <div className="relative h-[90vh] flex items-center justify-center flex-col">
+            <div className={`relative flex items-center justify-center flex-col ${isXLMonitor ? "h-[65vh]" : "h-[90vh] md:h-[100vh] 2xl:h-[80vh]"}`}>
 
                 <div className={`c-space z-10 ${isMobile ? "pt-0 pb-0" : "pt-24 pb-24"}`}>
                     <h3 className="head-text">Let's talk</h3>
