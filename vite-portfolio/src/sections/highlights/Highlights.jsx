@@ -2,13 +2,6 @@ import { highlights } from "../../constants/highlights"
 import { Button as HeroUIButton } from "@heroui/button";
 import { useIsMobile } from "../../hooks/useIsMobile";
 
-/* TODOS
-    - add a section for the links
-    - complete the highlights.js file DONE
-    - add short explainer text snippet
-
-*/
-
 function Highlights() {
 
     const isMobile = useIsMobile()

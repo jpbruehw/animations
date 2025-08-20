@@ -22,7 +22,7 @@ const Dropdown = ({ isOpen, setIsOpen }) => {
                 <ul>
                     {navLinks.map((item) => (
                         <li key={item.id}>
-                            <a href={item.href}>
+                            <a onClick={toggleMenu} href={item.href}>
                                 {item.name.slice(0, -1)}
                                 <span className="space">{item.name.slice(-1)}</span>
                             </a>

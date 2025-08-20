@@ -79,8 +79,6 @@ useEffect(() => {
     const isMobile = useIsMobile()
     const isTallMobile = useIsTallMobile()
 
-  // my-20 sm:h-[266px]
-
     const isLaptop = useMediaQuery({ minWidth: 769, maxWidth: 1280 })
     const isMonitor = useMediaQuery({ minWidth: 1281, maxWidth: 2200 })
     const isXLMonitor = useMediaQuery({ minWidth: 2201 })
@@ -101,9 +99,7 @@ useEffect(() => {
                     First, a bit about me.
                 </p>
                 <p className="projects-subtext">
-                    In Texas Hold'Em, the strongest hand against pocket aces is 5-6 suited. Why? 
-                    Because 5-6 suited can maneuver in a way that most can't and knows how to win in situations where most lose. 
-                    You can think of me as 5-6 suited with pair of pocket aces up his sleeve at all times.
+                    Welcome to my website, whatever your reason for visiting, it's nice to meet you.
                 </p>
             </div>
 
@@ -111,7 +107,7 @@ useEffect(() => {
                 <div className="xl:col-span-2 xl:row-span-3">
                     <div className="grid-container">
                         <img src="/assets/grid-1.png" alt="grid-1" className="w-full sm:h-[350px] h-fit object-contain" />
-                        <p className={isMobile ? "grid-headtext" : "grid-headtext-main"}>Hey there, nice to meet you.</p>
+                        <p className={isMobile ? "grid-headtext" : "grid-headtext-main"}>Hey</p>
                         <p className="grid-subtext">
                             <b>Who is the person behind this page?</b> Well, let me tell you. A relentless self-starter who only ever gives his very best effort and nothing less. 
                             A person who understands that a team is a sum of its parts, and that success is never the product of one person alone. 
