@@ -10,8 +10,6 @@ import { useMediaQuery } from "react-responsive"
 function BlackjackWrapper() {
     const isMobile = useIsMobile()
 
-    //const isLaptop = useMediaQuery({ minWidth: 769, maxWidth: 1280 })
-    //const isMonitor = useMediaQuery({ minWidth: 1281, maxWidth: 1600 })
     const isXLMonitor = useMediaQuery({ minWidth: 1601 })
 
     return (
@@ -21,7 +19,7 @@ function BlackjackWrapper() {
                     Wait! Before you keep scrolling...want to play a game?
                 </p>
                 <p className="projects-subtext">
-                    Is success luck or skill? I would argue that it is a mix of both. <b>However, the harder you work, the luckier you get.</b> 
+                    Is success luck or skill? I'd say a bit of of both. However, the harder you work, the luckier you get. Test both here, the high score is: 
                 </p>
             </div>
             <BlackjackGame />

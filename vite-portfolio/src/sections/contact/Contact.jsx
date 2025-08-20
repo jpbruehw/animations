@@ -5,16 +5,11 @@ import useAlert from '../../hooks/useAlert.js';
 import Alert from '../../components/Alert.jsx';
 import { useMediaQuery } from 'react-responsive';
 
-//** TODOS
-// add a new bg image for mobile screens
-// change the colors so the form inputs are a bit brighter
-// get the email client working
-// move the social links and email above the footer
-
 const Contact = () => {
     const formRef = useRef();
 
     const isMobile = useIsMobile()
+    const isMonitor = useMediaQuery({ minWidth: 1281, maxWidth: 2200 })
     const isXLMonitor = useMediaQuery({ minWidth: 2201 })
 
     const { alert, showAlert, hideAlert } = useAlert();
@@ -75,14 +70,10 @@ const Contact = () => {
         <section className={`c-space mb-10 bg-black-200 rounded-lg w-[90%] md:w-[95%] mx-auto ${isMobile ? "mt-4" : "mt-10"}`} id="contact">
             {alert.show && <Alert {...alert} />}
 
-            <div className={`relative flex items-center justify-center flex-col ${isXLMonitor ? "h-[65vh]" : "h-[90vh] md:h-[100vh] 2xl:h-[80vh]"}`}>
+            <div className={`relative flex items-center justify-center flex-col ${isXLMonitor ? "h-[60vh]" : "h-[90vh] md:h-[100vh] 2xl:h-[80vh]"}`}>
 
-                <div className={`c-space z-10 ${isMobile ? "pt-0 pb-0" : "pt-24 pb-24"}`}>
-                    <h3 className="head-text">Let's talk</h3>
-                    <p className="text-lg text-white-600 mt-3">
-                        Whether you’re looking to build a new website, improve your existing platform, or bring a unique project to
-                        life, I’m here to help.
-                    </p>
+                <div className={`c-space w-full z-10 ${isMobile ? "pt-0 pb-0" : isXLMonitor ?  "max-w-[55vw]" : isMonitor ? "max-w-[65vw] mx-auto" : "pt-12 pb-12"}`}>
+                    <h3 className="head-text">Reach out, let's talk.</h3>
 
                     <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
                         <label className="space-y-3">

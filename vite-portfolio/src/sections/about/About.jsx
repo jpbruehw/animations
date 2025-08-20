@@ -96,18 +96,17 @@ useEffect(() => {
 
             <div className="w-full mb-4">
                 <p className={`${isMobile ? "h-[75px] -mb-4" : "h-12"} head-text`}>
-                    First, a bit about me.
+                    Welcome to my site.
                 </p>
                 <p className="projects-subtext">
-                    Welcome to my website, whatever your reason for visiting, it's nice to meet you.
+                    Whatever your reason for visiting, it's nice to meet you.
                 </p>
             </div>
-
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="xl:col-span-2 xl:row-span-3">
                     <div className="grid-container">
                         <img src="/assets/grid-1.png" alt="grid-1" className="w-full sm:h-[350px] h-fit object-contain" />
-                        <p className={isMobile ? "grid-headtext" : "grid-headtext-main"}>Hey</p>
+                        <p className={isMobile ? "grid-headtext" : "grid-headtext-main"}>A bit about me.</p>
                         <p className="grid-subtext">
                             <b>Who is the person behind this page?</b> Well, let me tell you. A relentless self-starter who only ever gives his very best effort and nothing less. 
                             A person who understands that a team is a sum of its parts, and that success is never the product of one person alone. 
