@@ -15,33 +15,35 @@ function Highlights() {
             <div className="highlights-container bg-[#333446]">
                 {highlights.map((item) => (
                     <div key={`review-${item.id}`} className="highlight">
-                        <div>
+                        <div className="flex flex-col items-start justify-between h-full">
                             <p className="text-white-800 font-light">{item.desc}</p>
-                            <div className="highlights-content">
-                                <div className="flex gap-3">
-                                    <img src={item.img} alt="highlight" className="w-14 h-14 rounded-full" />
-                                    <div className="flex flex-col">
-                                        <p className="font-semibold text-white-800 mb-1">{item.header}</p>
-                                        <p className="text-white-600 md:text-base text-sm">{item.subheader}</p>
+                            <div className="w-full">
+                                <div className="highlights-content">
+                                    <div className="flex gap-3">
+                                        <img src={item.img} alt="highlight" className="w-14 h-14 rounded-full" />
+                                        <div className="flex flex-col">
+                                            <p className="font-semibold text-white-800 mb-1">{item.header}</p>
+                                            <p className="text-white-600 md:text-base text-sm">{item.subheader}</p>
+                                        </div>
                                     </div>
                                 </div>
+                                {item.links.length > 0
+                                    &&
+                                    <div className={`${isMobile ? "flex flex-col items-center gap-3" : "flex flex-wrap items-start gap-5"} justify-center w-full mt-4`}>
+                                        {item.links.map((link) => (
+                                            <HeroUIButton key={`link-${link.id}-${item.header}`} className={isMobile && "w-full"} variant="shadow">
+                                                <a
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    href={link.href}
+                                                >
+                                                    {link.text}
+                                                </a>
+                                            </HeroUIButton>
+                                        ))}
+                                    </div>
+                                }
                             </div>
-                            {item.links.length > 0
-                                &&
-                                <div className={`${isMobile ? "flex flex-col w-full items-center gap-3" : "flex flex-wrap items-start gap-5"} justify-center mt-4`}>
-                                    {item.links.map((link) => (
-                                        <HeroUIButton key={`link-${link.id}-${item.header}`} className={isMobile && "w-full"} variant="shadow">
-                                            <a
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                href={link.href}
-                                            >
-                                                {link.text}
-                                            </a>
-                                        </HeroUIButton>
-                                    ))}
-                                </div>
-                            }
                         </div>
                     </div>
                 ))}

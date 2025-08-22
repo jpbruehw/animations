@@ -13,7 +13,7 @@ function Links() {
     };
 
     return (
-        <section id="links" className="c-space">
+        <section id="links" className="c-space mb-12 sm:mb-0">
             <p className="head-text md:mb-6 mb-4 text-center">
                 Links
             </p>
