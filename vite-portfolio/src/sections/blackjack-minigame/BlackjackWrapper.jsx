@@ -3,7 +3,6 @@ import { useIsMobile } from "../../hooks/useIsMobile"
 import { useMediaQuery } from "react-responsive"
 
 /* TODOS
-    - correct the height and make formatting for mobile work
     - implement the logic to keep track of a high score
 */
 

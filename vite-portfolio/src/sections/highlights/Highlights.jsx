@@ -10,7 +10,7 @@ function Highlights() {
         <section id="highlights" className={`${!isMobile ? "mt-8" : ""} c-space pb-12`}>
             <h3 className="head-text md:mb-4 h-[50px] md:h-12">Personal Highlights</h3>
             <p className="projects-subtext">
-                    I believe the moment you stop learning and striving for excellence, you begin to stagnate. It is a fatal error that I refuse to make. Below are some personal highlights that exemplify how I live this mantra every day.
+                    I believe the moment you stop learning and striving for excellence, you begin to stagnate. It is a fatal error that I refuse to make. Below are some personal highlights that exemplify how I live these values every day.
                 </p>
             <div className="highlights-container bg-[#333446]">
                 {highlights.map((item) => (
