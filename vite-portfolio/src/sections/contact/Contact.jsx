@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
 import { useIsMobile } from '../../hooks/useIsMobile.js';
+import { useIsTallMobile } from '../../hooks/useIsTallMobile.js';
 import useAlert from '../../hooks/useAlert.js';
 import Alert from '../../components/Alert.jsx';
 import { useMediaQuery } from 'react-responsive';
@@ -9,6 +10,7 @@ const Contact = () => {
     const formRef = useRef();
 
     const isMobile = useIsMobile()
+    const isTallMobile = useIsTallMobile()
     const isMonitor = useMediaQuery({ minWidth: 1281, maxWidth: 2200 })
     const isXLMonitor = useMediaQuery({ minWidth: 2201 })
 
@@ -70,12 +72,12 @@ const Contact = () => {
         <section className={`c-space mb-10 bg-black-200 rounded-lg w-[90%] md:w-[95%] mx-auto ${isMobile ? "mt-4" : "mt-10"}`} id="contact">
             {alert.show && <Alert {...alert} />}
 
-            <div className={`relative flex items-center justify-center flex-col ${isXLMonitor ? "h-[60vh]" : "h-[90vh] md:h-[100vh] 2xl:h-[80vh]"}`}>
+            <div className={`relative flex items-center justify-center flex-col ${isXLMonitor ? "h-[60vh]" : (isMobile & isTallMobile) ? "h-[80vh]" : (isMobile & !isTallMobile) ? "min-h-screen" : "md:h-[100vh] 2xl:h-[80vh]"}`}>
 
-                <div className={`c-space w-full z-10 ${isMobile ? "pt-0 pb-0" : isXLMonitor ?  "max-w-[55vw]" : isMonitor ? "max-w-[65vw] mx-auto" : "pt-12 pb-12"}`}>
+                <div className={`c-space w-full z-10 ${isMobile ? "" : isXLMonitor ?  "max-w-[55vw]" : isMonitor ? "max-w-[65vw] mx-auto" : "pt-12 pb-12"}`}>
                     <h3 className="head-text">Reach out, let's talk.</h3>
 
-                    <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
+                    <form ref={formRef} onSubmit={handleSubmit} className={`flex flex-col ${(isMobile & isTallMobile) ? "mt-6 space-y-10" : (isMobile & !isTallMobile) ? "mt-4 space-y-5" : "mt-12 space-y-7"}`}>
                         <label className="space-y-3">
                             <span className="field-label">Full Name</span>
                             <input
