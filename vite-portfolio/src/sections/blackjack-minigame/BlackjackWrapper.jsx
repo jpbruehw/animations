@@ -1,6 +1,7 @@
 import BlackjackGame from "./Blackjack"
 import { useIsMobile } from "../../hooks/useIsMobile"
 import { useMediaQuery } from "react-responsive"
+//import { useIsTallMobile } from "../../hooks/useIsTallMobile"
 
 /* TODOS
     - implement the logic to keep track of a high score
@@ -8,6 +9,7 @@ import { useMediaQuery } from "react-responsive"
 
 function BlackjackWrapper() {
     const isMobile = useIsMobile()
+    // const isTallMobile = useIsTallMobile()
 
     const isXLMonitor = useMediaQuery({ minWidth: 1601 })
 

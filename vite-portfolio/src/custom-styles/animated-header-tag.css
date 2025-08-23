@@ -55,21 +55,6 @@
   }
 }
 
-/* .hero-heading::before {
-  color: #7F8CAA;
-  z-index: -1;
-  left: 5px;
-  top: 5px;
-} */
-
-/* .hero-heading::after {
-  -webkit-text-stroke: 2px #b8cfce;
-  color: transparent;
-  left: -8px;
-  top: -8px;
-  z-index: 1;
-} */
-
 .hero-heading:hover::before,
 .hero-heading.active::before {
   left: 0px;

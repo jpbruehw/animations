@@ -25,7 +25,7 @@ function Links() {
                     rel="noopener noreferrer"
                     className="social-icon"
                     >
-                        <img src="/assets/github.svg" alt="github" className="h-full rounded-full transition-transform duration-200 ease-in-out hover:scale-110" />
+                        <img src="/assets/github.svg" alt="github" className="h-full rounded-full sm:transition-transform sm:duration-200 sm:ease-in-out sm:hover:scale-110" />
                     </a>
                     <p className="md:text-xl font-medium text-gray_gradient text-white">
                         GitHub 
@@ -38,7 +38,7 @@ function Links() {
                         rel="noopener noreferrer"
                         className="social-icon"
                     >
-                        <img src="/assets/linkedin.svg" alt="linkedin" className="h-full rounded-full transition-transform duration-200 ease-in-out hover:scale-110" />
+                        <img src="/assets/linkedin.svg" alt="linkedin" className="h-full rounded-full sm:transition-transform sm:duration-200 sm:ease-in-out sm:hover:scale-110" />
                     </a>
                     <p className="md:text-xl font-medium text-gray_gradient text-white">
                         LinkedIn
@@ -51,7 +51,7 @@ function Links() {
                         rel="noopener noreferrer"
                         className="social-icon"
                     >
-                        <img src="/assets/cv.svg" alt="resume" className="h-full rounded-full transition-transform duration-200 ease-in-out hover:scale-110" />
+                        <img src="/assets/cv.svg" alt="resume" className="h-full rounded-full sm:transition-transform sm:duration-200 sm:ease-in-out sm:hover:scale-110" />
                     </a>
                     <p className="md:text-xl font-medium text-gray_gradient text-white">
                         Resume
@@ -64,7 +64,7 @@ function Links() {
                         rel="noopener noreferrer"
                         className="social-icon"
                     >
-                        <img src="/assets/thesis.svg" alt="master's thesis" className="h-full rounded-full transition-transform duration-200 ease-in-out hover:scale-110" />
+                        <img src="/assets/thesis.svg" alt="master's thesis" className="h-full rounded-full sm:transition-transform sm:duration-200 sm:ease-in-out sm:hover:scale-110" />
                     </a>
                     <p className="md:text-xl font-medium text-gray_gradient text-white">
                         Msc. Thesis
@@ -72,7 +72,7 @@ function Links() {
                 </div>
                 <div className="copy-container" onClick={handleCopy}>
                     <img src={hasCopied ? '/assets/tick.svg' : '/assets/copy.svg'} alt="copy" />
-                    <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">
+                    <p className="text-2xl lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">
                         jpkbruehwiler@gmail.com
                     </p>
                 </div>

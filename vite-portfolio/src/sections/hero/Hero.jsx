@@ -7,7 +7,6 @@ import { useMediaQuery } from "react-responsive"
 import "../../custom-styles/animated-header-tag.css"
 import { useState, useEffect } from "react"
 import HeroCamera from "./HeroCamera.jsx"
-
 import { useIsTallMobile } from "../../hooks/useIsTallMobile.js"
 
 function Hero() {

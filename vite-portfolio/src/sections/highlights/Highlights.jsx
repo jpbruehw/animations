@@ -1,13 +1,15 @@
 import { highlights } from "../../constants/highlights"
 import { Button as HeroUIButton } from "@heroui/button";
 import { useIsMobile } from "../../hooks/useIsMobile";
+import { useIsTallMobile } from "../../hooks/useIsTallMobile"
 
 function Highlights() {
 
     const isMobile = useIsMobile()
+    const isTallMobile = useIsTallMobile()
 
     return (
-        <section id="highlights" className={`${!isMobile ? "mt-8" : ""} c-space pb-12`}>
+        <section id="highlights" className={`${(isMobile & !isTallMobile) ? "" : (isMobile & isTallMobile) ? "-mt-6" : "mt-8"} c-space pb-12`}>
             <h3 className="head-text md:mb-4 h-[50px] md:h-12">Personal Highlights</h3>
             <p className="projects-subtext">
                     I believe the moment you stop learning and striving for excellence, you begin to stagnate. It is a fatal error that I refuse to make. Below are some personal highlights that exemplify how I live these values every day.
