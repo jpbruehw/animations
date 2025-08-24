@@ -33,8 +33,8 @@ function Hero() {
         scale = 1
         position = [1.2, -4, 2.8]
     } else if (isMonitor) {
-        scale = 1.2
-        position = [1.4, -1.5, 2.5]
+        scale = 1.1
+        position = [1.4, -1, 2.5]
     } else if (isXLMonitor) {
         scale = 1.1
         position = [1.5, -0.5, 2.3]
