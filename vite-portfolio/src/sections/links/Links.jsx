@@ -46,7 +46,7 @@ function Links() {
                 </div>
                 <div className="flex flex-col justify-center items-center">
                     <a
-                        href="https://drive.google.com/file/d/1xIuXDUn-J9_CYk0OdG4s8mzdy6GQNIZm/view"
+                        href="https://drive.google.com/file/d/11j2gAkISUGY10ZSocZIlt0OyA1RwQoMc/view?usp=share_link"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="social-icon"
