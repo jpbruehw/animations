@@ -48,7 +48,7 @@ function Hero() {
     }, []);
 
     return (
-        <section className="min-h-screen w-full flex flex-col relative transform-gpu"> 
+        <section id="home" className="min-h-screen w-full flex flex-col relative transform-gpu"> 
             <div className="w-full mx-auto flex flex-col sm:mt-30 mt-20 c-space gap-3">
                 <div className="hero-heading-wrapper z-20">
                     <h1 className={`hero-heading ${active && "active"} ${isMobile && "ml-2"}`} data-heading="I Create Value w/ Data & Technology">I Create Value w/ Data & Technology</h1>

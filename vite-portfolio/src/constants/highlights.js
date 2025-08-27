@@ -32,7 +32,7 @@ export const highlights = [
     {
         id: 3,
         header: 'Swiss Life Study Award Nominee',
-        subheader: 'Nominated for 2025 cohort, winners announced Sept. 2025.',
+        subheader: 'Nominated for 2025 cohort, winners announced Nov. 2025.',
         img: '/highlights/swisslife.svg',
         desc:
             'My master\'s thesis (written in LaTeX), Predicting US Recessions with Machine Learning (5.5/6), was nominated for this prestigious prize. In my thesis, I explored the relationship between various economic indicators and recessions. I then compared the performance of traditional logistic regression models with machine learning models to evaluate the respective models\' predictive power. My findings strongly suggest machine learning models are better predictors of forthcoming recessions than traditional modelling techniques.',

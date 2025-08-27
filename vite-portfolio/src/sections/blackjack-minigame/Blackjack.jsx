@@ -8,7 +8,7 @@ import PlayerBalance from './components/PlayerBalance'
 import MouseTrail from './components/MouseTrail'
 import Header from './components/Header'
 
-function BlackjackGame() {
+function BlackjackGame({ playerBalance, setPlayerBalance }) {
     const [gameDeck, setGameDeck] = useState(imgCombos);
     const [playerHand, setPlayerHand] = useState([]);
     const [dealerHand, setDealerHand] = useState([]);
@@ -16,7 +16,7 @@ function BlackjackGame() {
     const [alertInfo, setAlertInfo] = useState(null);
     const [newGame, setNewGame] = useState(false);
     const [hasPlacedBet, setHasPlacedBet] = useState(false);
-    const [playerBalance, setPlayerBalance] = useState(1000);
+   // const [playerBalance, setPlayerBalance] = useState(1000);
     const [betAmount, setBetAmount] = useState(0);
     const [dealerThinking, setDealerThinking] = useState(false);
     const [gameResult, setGameResult] = useState(null);

@@ -2,7 +2,7 @@ const navLinks = [
     {
         id: 1,
         name: 'Home',
-        href: '#root',
+        href: '#home',
     },
     {
         id: 2,
@@ -26,6 +26,11 @@ const navLinks = [
     },
     {
         id: 6,
+        name: "Links",
+        href: "#links"
+    },
+    {
+        id: 7,
         name: 'Contact',
         href: '#contact',
     },
