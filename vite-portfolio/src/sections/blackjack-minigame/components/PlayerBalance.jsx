@@ -16,10 +16,10 @@ export default function PlayerBalance({ balance, result }) {
     };
 
     const bgColors = {
-    win: "bg-green-200 animate-bgSwoosh",
-    loss: "bg-red-200 animate-bgSwoosh",
-    push: "bg-blue-200 animate-bgSwoosh",
-    default: "bg-white",
+        win: "bg-green-200 animate-bgSwoosh",
+        loss: "bg-red-200 animate-bgSwoosh",
+        push: "bg-blue-200 animate-bgSwoosh",
+        default: "bg-white",
     };
 
     const borderColors = {
@@ -63,7 +63,6 @@ export default function PlayerBalance({ balance, result }) {
         >
             <GradientText
                 animationSpeed={4}
-               // className="bg-transparent"
             >
                 <span className="font-bold text-4xl hover:cursor-default ">
                     <CountUp from={fromValue} to={balance} separator="," />

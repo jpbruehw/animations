@@ -1,15 +1,10 @@
 import BlackjackGame from "./Blackjack"
 import { useIsMobile } from "../../hooks/useIsMobile"
 import { useMediaQuery } from "react-responsive"
-//import { useIsTallMobile } from "../../hooks/useIsTallMobile"
-
-/* TODOS
-    - implement the logic to keep track of a high score
-*/
+import HighScore from "./components/HighScore"
 
 function BlackjackWrapper() {
     const isMobile = useIsMobile()
-    // const isTallMobile = useIsTallMobile()
 
     const isXLMonitor = useMediaQuery({ minWidth: 1601 })
 
@@ -20,7 +15,7 @@ function BlackjackWrapper() {
                     Wait! Before you keep scrolling...want to play a game?
                 </p>
                 <p className="projects-subtext">
-                    Is success luck or skill? I'd say a bit of of both. However, the harder you work, the luckier you get. Test both here, the high score is: 
+                    Is success luck or skill? I'd say a bit of of both. However, the harder you work, the luckier you get. Test both here, the high score is: <HighScore />
                 </p>
             </div>
             <BlackjackGame />
