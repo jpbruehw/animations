@@ -20,8 +20,6 @@ export function useIsTallMobile() {
             window.removeEventListener("resize", check);
         };
     }, []);
-    console.log("TALL MOBILE")
-    console.log(isTallMobile)
     
     return isTallMobile;
 }

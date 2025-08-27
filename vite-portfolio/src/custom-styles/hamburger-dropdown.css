@@ -21,9 +21,7 @@
   transition: all 0.25s;
   z-index: 20;
   cursor: pointer;
-  /* width: 65px; */
   width: 100%;
-  /* background:#212121; */
   height: 65px;
   right: 5px;
   top: 0;
@@ -115,7 +113,6 @@
     transition: all 0.2s;
     margin-top: 20px;
     padding: 5px 0;
-    /* color:white; */
   }
   & a{
     padding: 8px;
@@ -129,7 +126,6 @@
   &.open{
     height: 400px;
     width: 100%;
-    /* background: rgb(23 37 84); */
     background: #EAEFEF;
     border-bottom: 1px solid black;
   }

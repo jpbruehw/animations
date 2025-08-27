@@ -8,15 +8,6 @@ import { useMediaQuery } from 'react-responsive';
 import { useIsMobile } from '../../hooks/useIsMobile';
 import { useIsTallMobile } from '../../hooks/useIsTallMobile';
 
-/** TODOS
- *  Add multilingual card
- *  Rearrange the cards to highlight skills
- *  Add mobile styling to globe
- *  make sure the layout looks like the tutorial
- *  get the globe spinning slowly
- *  add a header to this and a little desc blurb
- */
-
 const About = () => {
 
     const [shouldRender, setShouldRender] = useState(false);

@@ -16,7 +16,6 @@ function BlackjackGame({ playerBalance, setPlayerBalance }) {
     const [alertInfo, setAlertInfo] = useState(null);
     const [newGame, setNewGame] = useState(false);
     const [hasPlacedBet, setHasPlacedBet] = useState(false);
-   // const [playerBalance, setPlayerBalance] = useState(1000);
     const [betAmount, setBetAmount] = useState(0);
     const [dealerThinking, setDealerThinking] = useState(false);
     const [gameResult, setGameResult] = useState(null);
